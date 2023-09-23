@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_23_141719) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_23_142133) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -69,6 +69,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_23_141719) do
     t.datetime "updated_at", null: false
     t.bigint "category_id"
     t.bigint "role_id"
+    t.text "bio", default: "", null: false
+    t.boolean "completed", default: false, null: false
     t.index ["category_id"], name: "index_users_on_category_id"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true

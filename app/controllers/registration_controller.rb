@@ -5,6 +5,6 @@ class RegistrationsController < Devise::RegistrationsController
     end
 
     def account_update_params
-      params.require(:freelancer).permit(:bio, :avatar, :first_name, :last_name, :phone, :location_id, :category_id, :current_password).merge(completed: true)
+      params.require(:freelancer).permit(:bio, :avatar, :first_name, :last_name, :category_id, :current_password).merge(completed: true)
     end
 end
