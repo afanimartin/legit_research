@@ -6,4 +6,5 @@ class User < ApplicationRecord
         
   has_many :publications
   belongs_to :category
+  belongs_to :role
 end
