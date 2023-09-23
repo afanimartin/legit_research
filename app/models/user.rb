@@ -5,6 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
         
   has_many :publications
-  belongs_to :category
   belongs_to :role
 end
