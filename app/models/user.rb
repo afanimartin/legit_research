@@ -6,4 +6,9 @@ class User < ApplicationRecord
         
   has_many :publications
   belongs_to :role
+
+  include UniqueId
+ 
+  self.primary_key = :id 
+  before_create :generate_unique_id
 end
