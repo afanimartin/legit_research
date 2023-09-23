@@ -6,6 +6,7 @@ class User < ApplicationRecord
         
   has_many :publications
   belongs_to :role
+  belongs_to :category
 
   include UniqueId
  
