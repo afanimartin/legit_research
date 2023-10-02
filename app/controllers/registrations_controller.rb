@@ -1,7 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
   private
     def sign_up_params
-      params.require(:user).permit(:email, :password, :password_confirmation).merge(role_id: 2)
+      params.require(:user).permit(:email, :password, :password_confirmation).merge(role_id: 2, category_id: "VSx8dxvgu2NebCaA21LZ35oa")
     end
 
     def account_update_params
