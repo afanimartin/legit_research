@@ -1,4 +1,734 @@
-<h3><%= @msg %></h3>
-<div class="container">
-  <p>this is a container</p>
+<%= render "layouts/navbar" %>
+<div class="wrapper">
+  <div class="section hero-blue">
+    <div class="container w-container">
+      <div class="w-layout-grid hero-grid">
+        <div class="text-box mobile-center">
+          <h1 class="heading large-h1">
+            Write Long-Form Content In Seconds
+          </h1>
+          <div class="text-box _450px mobile-center">
+            <p class="paragraph">
+              Spend less time copywriting and researching with AI. Our AI
+              writer generates 1500+ word articles.
+            </p>
+          </div>
+          <div class="spacer _24"></div>
+          <a href="/get-started" class="button white w-button"
+            >Get started now</a
+          >
+          <p class="paragraph small no-margin">
+            No credit card required <span class="small-dot">•</span>
+            Try for free
+          </p>
+        </div>
+        <div
+          id="w-node-fdba7448-e060-f785-c6a5-96d8248d753d-87f1cc13"
+          class="hero-illustration-box"
+        >
+          <img
+            src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/639805696658295b1ae8e467_Rectangle%20308.webp"
+            alt="Hero Illustration"
+            id="w-node-_762eb1d7-aff2-0755-88a3-ba24a681999b-87f1cc13"
+            width="452"
+            srcset="
+              https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/639805696658295b1ae8e467_Rectangle%20308-p-500.webp   500w,
+              https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/639805696658295b1ae8e467_Rectangle%20308-p-800.webp   800w,
+              https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/639805696658295b1ae8e467_Rectangle%20308-p-1080.webp 1080w,
+              https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/639805696658295b1ae8e467_Rectangle%20308.webp        1154w
+            "
+            sizes="100vw"
+            class="hero-illustration"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section small overflow-none">
+    <div class="spacer _16 mobile-hidden"></div>
+    <div class="logos-row-wrapper">
+      <div
+        style="
+          -webkit-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1)
+            rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+          -moz-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0)
+            rotateY(0) rotateZ(0) skew(0, 0);
+          -ms-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0)
+            rotateY(0) rotateZ(0) skew(0, 0);
+          transform: translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0)
+            rotateY(0) rotateZ(0) skew(0, 0);
+        "
+        class="logos-row-block"
+      >
+        <div class="customer-logos-row">
+          <div class="customer-logo-container">
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad62a29f1cc5c_Emerald%20Black%20Logo.svg"
+              width="117"
+              alt="Emerald Logo"
+              class="customer-logo-image"
+            />
+          </div>
+          <div class="customer-logo-container">
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad6322af1cc5a_Etro%20Black%20Logo.svg"
+              width="102"
+              alt="Etro Logo"
+              class="customer-logo-image"
+            />
+          </div>
+          <div class="customer-logo-container">
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad642abf1cc5d_Focusfox%20Black%20Logo.svg"
+              width="124"
+              alt="FocusFox Logo"
+              class="customer-logo-image"
+            />
+          </div>
+          <div class="customer-logo-container">
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad62fb0f1cc5f_NowInTech%20Black%20Logo.svg"
+              width="159"
+              alt="NowInTech Logo"
+              class="customer-logo-image"
+            />
+          </div>
+          <div class="customer-logo-container larger">
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad65236f1cc5b_Optimer%20Black%20Logo.svg"
+              width="148"
+              alt="Optimer Logo"
+              class="customer-logo-image"
+            />
+          </div>
+          <div class="customer-logo-container">
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad66cf1f1cc5e_Carded%20Black%20Logo.svg"
+              width="117"
+              alt="Carded Logo"
+              class="customer-logo-image"
+            />
+          </div>
+        </div>
+        <div class="customer-logos-row">
+          <div class="customer-logo-container">
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad62a29f1cc5c_Emerald%20Black%20Logo.svg"
+              width="117"
+              alt="Emerald Logo"
+              class="customer-logo-image"
+            />
+          </div>
+          <div class="customer-logo-container">
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad6322af1cc5a_Etro%20Black%20Logo.svg"
+              width="102"
+              alt="Etro Logo"
+              class="customer-logo-image"
+            />
+          </div>
+          <div class="customer-logo-container">
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad642abf1cc5d_Focusfox%20Black%20Logo.svg"
+              width="124"
+              alt="FocusFox Logo"
+              class="customer-logo-image"
+            />
+          </div>
+          <div class="customer-logo-container">
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad62fb0f1cc5f_NowInTech%20Black%20Logo.svg"
+              width="159"
+              alt="NowInTech Logo"
+              class="customer-logo-image"
+            />
+          </div>
+          <div class="customer-logo-container larger">
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad65236f1cc5b_Optimer%20Black%20Logo.svg"
+              width="148"
+              alt="Optimer Logo"
+              class="customer-logo-image"
+            />
+          </div>
+          <div class="customer-logo-container">
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad66cf1f1cc5e_Carded%20Black%20Logo.svg"
+              width="117"
+              alt="Carded Logo"
+              class="customer-logo-image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section small">
+    <div class="container w-container">
+      <div class="w-layout-grid feature-grid">
+        <img
+          class="full-height-image"
+          src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63982826c9353e21cca459d0_windows-97pJ_0CkVEY-unsplash.webp"
+          width="431"
+          alt=""
+          sizes="(max-width: 767px) 92vw, (max-width: 991px) 94vw, 92vw"
+          data-ix="fade-in-on-scroll"
+          srcset="
+            https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63982826c9353e21cca459d0_windows-97pJ_0CkVEY-unsplash-p-500.webp  500w,
+            https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63982826c9353e21cca459d0_windows-97pJ_0CkVEY-unsplash-p-800.webp  800w,
+            https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63982826c9353e21cca459d0_windows-97pJ_0CkVEY-unsplash.webp       1000w
+          "
+        />
+        <div class="full-height-text-box">
+          <div class="top-height-title">
+            <h2 class="heading h2">
+              Write blog posts, stories, and even books
+            </h2>
+          </div>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="light-tick-list w-richtext">
+            <ul role="list">
+              <li>Understand your options</li>
+              <li>No lock-ins</li>
+              <li>Loved by copyrighters</li>
+            </ul>
+          </div>
+          <div class="spacer _16"></div>
+          <a href="/get-started" class="button w-button">Get started now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container w-container">
+      <div>
+        <div class="text-box">
+          <h2 class="heading h2">Writing, automated</h2>
+          <p class="paragraph medium">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="spacer _48"></div>
+        <div class="w-layout-grid _4-grid">
+          <div class="text-box">
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63993b3f4cdf4846cfd020ae_Robot.svg"
+              alt=""
+              class="card-icon"
+            />
+            <h3 class="heading h4">Learn your options</h3>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor.
+            </p>
+          </div>
+          <div class="text-box">
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63993b3fbb82c56213f77a22_GitPullRequest.svg"
+              alt=""
+              class="card-icon"
+            />
+            <h3 class="heading h4">Stay informed</h3>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et doloretro.
+            </p>
+          </div>
+          <div class="text-box">
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398305bd9d4a15736f45fb5_ShieldChevron.svg"
+              alt=""
+              class="card-icon"
+            />
+            <h3 class="heading h4">Automate it all</h3>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor ipsum.
+            </p>
+          </div>
+          <div class="text-box">
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398305babd85e9c72c475b2_Coins.svg"
+              alt=""
+              class="card-icon"
+            />
+            <h3 class="heading h4">Stay informed</h3>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod incididunt ut labore et consectetur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section grey">
+    <div class="container w-container">
+      <div class="text-box">
+        <h2 class="heading h2">Generate killer content, effortlessly</h2>
+      </div>
+      <div class="spacer _16"></div>
+      <div
+        data-duration-in="300"
+        data-duration-out="100"
+        data-current="Tab 2"
+        data-easing="ease"
+        class="horizontal-tabs w-tabs"
+      >
+        <div class="tabs-text-boxes w-tab-menu">
+          <a
+            data-w-tab="Tab 2"
+            data-w-id="82337e00-8b8e-ecbd-5533-9b2b07b2cca0"
+            class="tab-text-box w-inline-block w-tab-link w--current"
+          >
+            <img
+              style="opacity: 0.3"
+              loading="lazy"
+              alt=""
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63993b3f093252c6480da6bd_Cpu.svg"
+              class="icon tab"
+            />
+            <div class="tab-info-box">
+              <h3 class="heading h5">Anti-loss technology</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.
+              </p>
+            </div>
+            <img
+              alt=""
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6399356ebb82c51db0f707be_Down%20Arrow.svg"
+              class="tab-dropdown-icon"
+            />
+          </a>
+          <a
+            data-w-tab="Tab 1"
+            data-w-id="82337e00-8b8e-ecbd-5533-9b2b07b2cc97"
+            class="tab-text-box w-inline-block w-tab-link"
+          >
+            <img
+              style="opacity: 0.3"
+              loading="lazy"
+              alt=""
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63993b3e4cdf4814a3d020ad_Gauge.svg"
+              class="icon tab"
+            />
+            <img
+              alt=""
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6399356ebb82c51db0f707be_Down%20Arrow.svg"
+              class="tab-dropdown-icon"
+            />
+            <div class="tab-info-box">
+              <h3 class="heading h5">Exchange easily</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.
+              </p>
+            </div>
+          </a>
+          <a
+            data-w-tab="Tab 5"
+            data-w-id="1a919bf6-369c-11e4-9bdf-898aa73ef921"
+            class="tab-text-box w-inline-block w-tab-link"
+          >
+            <img
+              style="opacity: 0.3"
+              loading="lazy"
+              alt=""
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63993b3f6c4ddc30951145bc_HourglassSimpleMedium.svg"
+              class="icon tab"
+            />
+            <div class="tab-info-box">
+              <h3 class="heading h5">Fully encrypted</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.
+              </p>
+            </div>
+            <img
+              alt=""
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6399356ebb82c51db0f707be_Down%20Arrow.svg"
+              class="tab-dropdown-icon"
+            />
+          </a>
+        </div>
+        <div class="tabs-images w-tab-content">
+          <div data-w-tab="Tab 2" class="tab-pane w-tab-pane w--tab-active">
+            <img
+              width="481"
+              sizes="(max-width: 767px) 92vw, (max-width: 991px) 94vw, (max-width: 1279px) 48vw, 573.0625px"
+              alt=""
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398282692a9bd79a1eecafc_windows-241bwQl2uWE-unsplash.webp"
+              loading="lazy"
+              srcset="
+                https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398282692a9bd79a1eecafc_windows-241bwQl2uWE-unsplash-p-500.webp  500w,
+                https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398282692a9bd79a1eecafc_windows-241bwQl2uWE-unsplash-p-800.webp  800w,
+                https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398282692a9bd79a1eecafc_windows-241bwQl2uWE-unsplash.webp       1000w
+              "
+              class="right-tab-image"
+            />
+          </div>
+          <div data-w-tab="Tab 1" class="tab-pane w-tab-pane">
+            <img
+              width="481"
+              sizes="(max-width: 767px) 92vw, (max-width: 991px) 94vw, (max-width: 1279px) 48vw, 599.6875px"
+              alt=""
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/639828266215ce49d10d67bf_surface-S_YOuAUMm2o-unsplash.webp"
+              loading="lazy"
+              srcset="
+                https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/639828266215ce49d10d67bf_surface-S_YOuAUMm2o-unsplash-p-500.webp  500w,
+                https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/639828266215ce49d10d67bf_surface-S_YOuAUMm2o-unsplash-p-800.webp  800w,
+                https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/639828266215ce49d10d67bf_surface-S_YOuAUMm2o-unsplash.webp       1000w
+              "
+              class="right-tab-image"
+            />
+          </div>
+          <div data-w-tab="Tab 5" class="tab-pane w-tab-pane">
+            <img
+              width="481"
+              sizes="(max-width: 767px) 92vw, (max-width: 991px) 94vw, (max-width: 1279px) 48vw, 599.6875px"
+              alt=""
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63982826613a2725cb7b0c03_microsoft-edge-fb_wM334yYQ-unsplash.webp"
+              loading="lazy"
+              srcset="
+                https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63982826613a2725cb7b0c03_microsoft-edge-fb_wM334yYQ-unsplash-p-500.webp  500w,
+                https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63982826613a2725cb7b0c03_microsoft-edge-fb_wM334yYQ-unsplash-p-800.webp  800w,
+                https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63982826613a2725cb7b0c03_microsoft-edge-fb_wM334yYQ-unsplash.webp       1000w
+              "
+              class="right-tab-image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container w-container">
+      <div class="_3-grid">
+        <div class="outline-text-card">
+          <img
+            src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63982fe8c9353ef799a4d425_LightbulbFilament.svg"
+            alt=""
+            class="card-icon black"
+          />
+          <h2 class="heading h4">Fast, really fast</h2>
+          <p class="paragraph">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="outline-text-card">
+          <img
+            src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398305babd85e9c72c475b2_Coins.svg"
+            alt=""
+            class="card-icon black"
+          />
+          <h2 class="heading h4">More bang for buck</h2>
+          <p class="paragraph">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="outline-text-card">
+          <img
+            src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398305bd9d4a15736f45fb5_ShieldChevron.svg"
+            alt=""
+            class="card-icon black"
+          />
+          <h2 class="heading h4">Safe and secure</h2>
+          <p class="paragraph">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container w-container">
+      <div class="w-layout-grid tight-2-grid">
+        <img
+          class="full-height-image"
+          src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63982827e742b8078a133958_thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.webp"
+          width="431"
+          alt=""
+          sizes="(max-width: 767px) 92vw, (max-width: 991px) 94vw, 92vw"
+          data-ix="fade-in-on-scroll"
+          srcset="
+            https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63982827e742b8078a133958_thisisengineering-raeng-ZPeXrWxOjRQ-unsplash-p-500.webp  500w,
+            https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63982827e742b8078a133958_thisisengineering-raeng-ZPeXrWxOjRQ-unsplash-p-800.webp  800w,
+            https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63982827e742b8078a133958_thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.webp       1000w
+          "
+        />
+        <div class="full-height-card">
+          <div class="top-height-title">
+            <h2 class="heading h2">
+              Create highly engaging SEO optimized content
+            </h2>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div class="spacer _48"></div>
+          <a href="/get-started" class="button w-button">Get started now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section small">
+    <div class="container">
+      <h2 class="heading h2">See examples of the bot</h2>
+      <div class="spacer _32"></div>
+      <div class="w-dyn-list">
+        <div role="list" class="_3-grid w-dyn-items">
+          <div role="listitem" class="w-dyn-item">
+            <a
+              href="/post/automating-daily-tasks-from-your-phone"
+              class="card w-inline-block"
+            >
+              <img
+                alt="Automating Daily Tasks from Your Phone"
+                src="https://assets.website-files.com/6398008a5a4ad6c681f1cc38/63993c0bbb82c5e7d1f784ab_63982827e742b8078a133958_thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.jpg"
+                sizes="(max-width: 767px) 92vw, (max-width: 991px) 45vw, 29vw"
+                srcset="
+                  https://assets.website-files.com/6398008a5a4ad6c681f1cc38/63993c0bbb82c5e7d1f784ab_63982827e742b8078a133958_thisisengineering-raeng-ZPeXrWxOjRQ-unsplash-p-500.jpg  500w,
+                  https://assets.website-files.com/6398008a5a4ad6c681f1cc38/63993c0bbb82c5e7d1f784ab_63982827e742b8078a133958_thisisengineering-raeng-ZPeXrWxOjRQ-unsplash-p-800.jpg  800w,
+                  https://assets.website-files.com/6398008a5a4ad6c681f1cc38/63993c0bbb82c5e7d1f784ab_63982827e742b8078a133958_thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.jpg       1000w
+                "
+                class="card-thumbnail"
+              />
+              <div class="blog-card-text-box">
+                <div class="tag">Improvements</div>
+                <h2 class="heading h4">
+                  Automating Daily Tasks from Your Phone
+                </h2>
+                <p class="paragraph small">
+                  Dicta nihil ratione corrupti. Aut dolorem dolores omnis
+                  laboriosam ratione sequi. Provident ad sed velit. Est ea
+                  ab.
+                </p>
+                <div class="paragraph small">December 14, 2022</div>
+              </div>
+            </a>
+          </div>
+          <div role="listitem" class="w-dyn-item">
+            <a
+              href="/post/can-you-automate-group-learning"
+              class="card w-inline-block"
+            >
+              <img
+                alt="Can You Automate Group Learning?"
+                src="https://assets.website-files.com/6398008a5a4ad6c681f1cc38/63993cb45e36f41668964d80_deepmind-ggeXPf_ykAU-unsplash.jpg"
+                sizes="(max-width: 767px) 92vw, (max-width: 991px) 45vw, 29vw"
+                srcset="
+                  https://assets.website-files.com/6398008a5a4ad6c681f1cc38/63993cb45e36f41668964d80_deepmind-ggeXPf_ykAU-unsplash-p-500.jpg  500w,
+                  https://assets.website-files.com/6398008a5a4ad6c681f1cc38/63993cb45e36f41668964d80_deepmind-ggeXPf_ykAU-unsplash-p-800.jpg  800w,
+                  https://assets.website-files.com/6398008a5a4ad6c681f1cc38/63993cb45e36f41668964d80_deepmind-ggeXPf_ykAU-unsplash.jpg       1000w
+                "
+                class="card-thumbnail"
+              />
+              <div class="blog-card-text-box">
+                <div class="tag">Tips &amp;Tricks</div>
+                <h2 class="heading h4">Can You Automate Group Learning?</h2>
+                <p class="paragraph small">
+                  Dicta nihil ratione corrupti. Aut dolorem dolores omnis
+                  laboriosam ratione sequi. Provident ad sed velit. Est ea
+                  ab.
+                </p>
+                <div class="paragraph small">December 14, 2022</div>
+              </div>
+            </a>
+          </div>
+          <div role="listitem" class="w-dyn-item">
+            <a
+              href="/post/our-3-000-000-b-round"
+              class="card w-inline-block"
+            >
+              <img
+                alt="Our $3,000,000 B Round Investors"
+                src="https://assets.website-files.com/6398008a5a4ad6c681f1cc38/63993d16d2809ed91bd83346_639828266215ce49d10d67bf_surface-S_YOuAUMm2o-unsplash.jpg"
+                sizes="(max-width: 767px) 92vw, (max-width: 991px) 45vw, 29vw"
+                srcset="
+                  https://assets.website-files.com/6398008a5a4ad6c681f1cc38/63993d16d2809ed91bd83346_639828266215ce49d10d67bf_surface-S_YOuAUMm2o-unsplash-p-500.jpg  500w,
+                  https://assets.website-files.com/6398008a5a4ad6c681f1cc38/63993d16d2809ed91bd83346_639828266215ce49d10d67bf_surface-S_YOuAUMm2o-unsplash-p-800.jpg  800w,
+                  https://assets.website-files.com/6398008a5a4ad6c681f1cc38/63993d16d2809ed91bd83346_639828266215ce49d10d67bf_surface-S_YOuAUMm2o-unsplash.jpg       1000w
+                "
+                class="card-thumbnail"
+              />
+              <div class="blog-card-text-box">
+                <div class="tag">News</div>
+                <h2 class="heading h4">Our $3,000,000 B Round Investors</h2>
+                <p class="paragraph small">
+                  Eos ipsum et est quis neque cum. Quis autem est eligendi
+                  amet animi eaque. Itaque minus illo delectus vel vitae
+                  dolores minus.
+                </p>
+                <div class="paragraph small">December 14, 2022</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container w-container">
+      <div class="cta-box">
+        <div class="cta-text-box">
+          <h2
+            id="w-node-df25bafc-bbda-a924-0cad-0deb1912000c-19120008"
+            class="heading h2"
+          >
+            Get started with Legit Research
+          </h2>
+          <p class="paragraph medium">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <div class="spacer _16"></div>
+          <a href="/get-started" class="button white w-button"
+            >Get started now</a
+          >
+          <div
+            id="w-node-accda97e-abab-b1f7-2fa6-390537acd3c4-19120008"
+            class="cta-tick-text-row"
+          >
+            <p class="small-tick-text">Free 30-day trial</p>
+            <p class="small-tick-text">No credit-card required</p>
+          </div>
+        </div>
+        <img
+          src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63993e11e1a389214fd5044b_deepmind-9Y4ronQmPjk-unsplash.webp"
+          loading="lazy"
+          width="474"
+          alt=""
+          srcset="
+            https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63993e11e1a389214fd5044b_deepmind-9Y4ronQmPjk-unsplash-p-500.webp  500w,
+            https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63993e11e1a389214fd5044b_deepmind-9Y4ronQmPjk-unsplash-p-800.webp  800w,
+            https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63993e11e1a389214fd5044b_deepmind-9Y4ronQmPjk-unsplash.webp       1000w
+          "
+          sizes="(max-width: 767px) 86vw, (max-width: 991px) 35vw, 41vw"
+          class="cta-image"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-container w-container">
+    <div class="w-layout-grid footer-grid">
+      <div
+        id="w-node-b66374b8-a69d-2cb6-3980-23c2cf3fcb8a-cf3fcb86"
+        class="footer-logo-box"
+      >
+        <a
+          data-ix="logo"
+          href="/"
+          aria-current="page"
+          class="footer-logo w-nav-brand w--current"
+        >
+          <img
+            src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63f822ced2d7941c2bd8fe97_AI%20Small%20Logo.svg"
+            width="90"
+            alt=""
+          />
+        </a>
+        <p class="paragraph small">
+          Built by
+          <a href="https://www.khansuk.com" target="_blank"
+            >Khansuk Digital Agency</a
+          >
+        </p>
+        <div class="spacer _48"></div>
+      </div>
+      <div class="footer-links-container">
+        <h5 class="footer-header">Website</h5>
+        <a href="/features" class="footer-link">Features</a>
+        <a href="/pricing" class="footer-link">Pricing</a>
+        <a href="/faq" class="footer-link">FAQs</a>
+        <a href="/blog" class="footer-link">Blog</a>
+        <a href="#" class="footer-link">Support</a>
+        <a href="/terms-conditions" class="footer-link"
+          >Terms &amp;Conditions</a
+        >
+        <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+      </div>
+      <div class="footer-links-container">
+        <h5 class="footer-header">Admin</h5>
+        <a href="/admin/style-guide" class="footer-link">Style Guide</a>
+        <a href="/admin/licenses" class="footer-link">Licenses</a>
+        <a href="/admin/instructions" class="footer-link">Instructions</a>
+        <a href="/admin/changelog" class="footer-link">Changelog</a>
+        <a href="/401" class="footer-link">Password</a>
+        <a href="/404" class="footer-link">404</a>
+      </div>
+      <div
+        id="w-node-_32f30c02-3be8-5b74-37a8-a671b034e6d6-cf3fcb86"
+        class="text-box _400px"
+      >
+        <h5 class="footer-header">Newsletter</h5>
+        <p class="paragraph small">
+          Sign up for the latest news, company insights, and AI updates.
+        </p>
+      </div>
+    </div>
+    <div class="spacer _64"></div>
+    <div class="horizontal-line"></div>
+    <div class="lower-footer-grid">
+      <div class="paragraph small no-margin">
+        © 2023 AI. All Rights Reserved.
+      </div>
+      <div
+        id="w-node-_37d13e64-de06-edf8-ab96-0ddb1cc90034-cf3fcb86"
+        class="footer-social-section"
+      >
+        <div class="social-grid">
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            class="social-link w-inline-block"
+          >
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad6403ff1cc94_Vector.svg"
+              loading="lazy"
+              alt=""
+              class="social-link-icon"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            class="social-link w-inline-block"
+          >
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad642f2f1cc93_LinkedIn%20-%20Negative.svg"
+              loading="lazy"
+              alt=""
+              class="social-link-icon"
+            />
+          </a>
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            class="social-link w-inline-block"
+          >
+            <img
+              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad6d666f1cc92_Facebook%20-%20Negative.svg"
+              loading="lazy"
+              alt=""
+              class="social-link-icon"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
