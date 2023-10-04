@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   }
 
   resources :users
+  get 'contact', to: 'contact#index'
+  get 'publications', to: 'publications#index'
+  get 'faqs', to: 'faqs#index'
+  get 'pricing', to: 'pricing#index'
 end

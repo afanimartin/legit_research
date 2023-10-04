@@ -24,10 +24,10 @@ class="nav-bar w-nav"
 </div>
 <nav role="navigation" class="nav-content w-nav-menu">
 <div class="nav-menu">
-<a href="/pricing" class="nav-link w-nav-link">Pricing</a>
-<a href="/faq" class="nav-link w-nav-link">FAQs</a>
-<a href="/publications" class="nav-link w-nav-link">Publications</a>
-<a href="/contact" class="nav-link w-nav-link">Contact</a>
+<%= link_to "Pricing", pricing_path, class: "nav-link w-nav-link" %>
+<%= link_to "FAQs", faqs_path, class: "nav-link w-nav-link" %>
+<%= link_to "Publications", publications_path, class: "nav-link w-nav-link" %>
+<%= link_to "Contact", contact_path, class: "nav-link w-nav-link" %>
 <div data-hover="true" data-delay="0" class="dropdown w-dropdown">
   <div class="nav-dropdown w-dropdown-toggle">
   </div>
@@ -40,10 +40,8 @@ class="nav-bar w-nav"
 </div>
 </div>
 <div class="nav-cta-button-container">
-<a href="/sign-in" class="nav-link w-nav-link">Sign in</a>
-<a href="/book-demo" class="nav-link primary w-nav-link"
-  >Get started now</a
->
+  <%= link_to "Sign in", new_user_session_path, class: "nav-link w-nav-link" %>
+  <div style="color: white !important"><%= link_to "Get started now", new_user_registration_path, class: "nav-link primary w-nav-link" %></div>
 </div>
 </nav>
 <div class="menu-button w-nav-button">
