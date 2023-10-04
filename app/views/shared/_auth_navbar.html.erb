@@ -1,0 +1,12 @@
+<div class="sign-up-nav">
+  <%= link_to root_path,
+    class:"footer-logo w-nav-brand w--current" do %>
+    <%= image_tag ("https://res.cloudinary.com/dmyhendcr/image/upload/v1696385443/legit_uploads/legit_research-logos_transparent_h6jpix.png"), width: 80 %>
+  <% end %>
+  <div class="nav-spacer"></div>
+  <div class="sign-in-div">
+    <div class="paragraph-small">Don &#x27;t have an account yet?</div>
+    <div class="spacer _16"></div>
+    <%= link_to new_user_registration_path, class: "small-button light no-margin w-button" do %>Sign Up<% end %>
+  </div>
+</div>

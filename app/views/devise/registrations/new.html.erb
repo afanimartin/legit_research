@@ -1,0 +1,52 @@
+<div
+  id="w-node-e589e84a-0ba8-c850-6ac1-a4c50ec4c3b3-bdf1cc2e"
+      class="full-page-wrapper">
+
+<div class="sign-up-nav">
+  <%= link_to root_path,
+    class:"footer-logo w-nav-brand w--current" do %>
+    <%= image_tag ("https://res.cloudinary.com/dmyhendcr/image/upload/v1696385443/legit_uploads/legit_research-logos_transparent_h6jpix.png"), width: 80 %>
+  <% end %>
+  <div class="nav-spacer"></div>
+  <div class="sign-in-div">
+    <div class="paragraph-small">Already have an account?</div>
+    <div class="spacer _16"></div>
+    <%= link_to new_user_registration_path, class: "small-button light no-margin w-button" do %>Log In<% end %>
+  </div>
+</div>
+
+<div class="center-card">
+  <div class="text-box">
+    <h1 class="heading h3">Get Started</h1>
+    <p>Register now and start publishing your work!</p>
+  </div>
+<div class="spacer _16"></div>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="mb-3">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Enter your email" %>
+  </div>
+  <br>
+  <div class="mb-3">
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "*******" %>
+  </div>
+  <br>
+  <div class="mb-3">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "*******" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.submit "Sign up", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<br>
+
+<p>By clicking the button above, you agree to our Terms & Conditions and Privacy Policy.</p>
+
+</div>
