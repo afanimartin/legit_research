@@ -9,18 +9,10 @@ class="nav-bar w-nav"
 >
 <div class="nav-container w-container">
 <div class="logo-div">
-  <a
-    href="/"
-    aria-current="page"
-    class="nav-logo w-inline-block w--current"
-  >
-    <img
-      src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63f822ced2d7941c2bd8fe97_AI%20Small%20Logo.svg"
-      width="68"
-      alt=""
-      class="logo"
-    />
-  </a>
+<%= link_to root_path,
+  class:"footer-logo w-nav-brand w--current" do %>
+  <%= image_tag ("https://res.cloudinary.com/dmyhendcr/image/upload/v1696385443/legit_uploads/legit_research-logos_transparent_h6jpix.png"), width: 80 %>
+<% end %>
 </div>
 <nav role="navigation" class="nav-content w-nav-menu">
 <div class="nav-menu">

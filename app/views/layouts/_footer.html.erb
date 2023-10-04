@@ -5,18 +5,10 @@
         id="w-node-b66374b8-a69d-2cb6-3980-23c2cf3fcb8a-cf3fcb86"
         class="footer-logo-box"
       >
-        <a
-          data-ix="logo"
-          href="/"
-          aria-current="page"
-          class="footer-logo w-nav-brand w--current"
-        >
-          <img
-            src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63f822ced2d7941c2bd8fe97_AI%20Small%20Logo.svg"
-            width="90"
-            alt=""
-          />
-        </a>
+        <%= link_to root_path,
+          class:"footer-logo w-nav-brand w--current" do %>
+          <%= image_tag ("https://res.cloudinary.com/dmyhendcr/image/upload/v1696385443/legit_uploads/legit_research-logos_transparent_h6jpix.png"), width: 80 %>
+        <% end %>
         <p class="paragraph small">
           Built by
           <a href="https://www.khansuk.com" target="_blank"
