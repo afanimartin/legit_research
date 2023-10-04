@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get 'publications', to: 'publications#index'
   get 'faqs', to: 'faqs#index'
   get 'pricing', to: 'pricing#index'
+  get 'privacy', to: 'privacy#index'
+  get 'terms', to: 'terms#index'
 end

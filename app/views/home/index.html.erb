@@ -14,9 +14,7 @@
             </p>
           </div>
           <div class="spacer _24"></div>
-          <div style="color: white !important; background-color: white !important; width: 27%; text-align:center; padding:10px; line-height: 1.5; margin-left: 0;">
-            <%= link_to class: "button white w-button" do %>Get started now<% end %>
-          </div>
+          <%= link_to "Get started now", new_user_registration_path, class: "button white w-button" %>
           <br>
           <p class="paragraph small no-margin">
             No credit card required <span class="small-dot">•</span>
@@ -198,7 +196,7 @@
             </ul>
           </div>
           <div class="spacer _16"></div>
-          <a href="/get-started" class="button w-button">Get started now</a>
+          <%= link_to "Get started now", new_user_registration_path, class: "button w-button" %>
         </div>
       </div>
     </div>
@@ -479,7 +477,7 @@
             </p>
           </div>
           <div class="spacer _48"></div>
-          <a href="/get-started" class="button w-button">Get started now</a>
+          <%= link_to "Get started now", new_user_registration_path, class: "button w-button" %>
         </div>
       </div>
     </div>
@@ -595,14 +593,12 @@
             eiusmod tempor incididunt.
           </p>
           <div class="spacer _16"></div>
-          <a href="/get-started" class="button white w-button"
-            >Get started now</a
-          >
+          <%= link_to "Get started now", new_user_registration_path, class: "button w-button" %>
           <div
             id="w-node-accda97e-abab-b1f7-2fa6-390537acd3c4-19120008"
             class="cta-tick-text-row"
           >
-            <p class="small-tick-text">Free 30-day trial</p>
+            <p class="small-tick-text">Free to start</p>
             <p class="small-tick-text">No credit-card required</p>
           </div>
         </div>
@@ -623,113 +619,5 @@
     </div>
   </div>
 </div>
-<div class="footer">
-  <div class="footer-container w-container">
-    <div class="w-layout-grid footer-grid">
-      <div
-        id="w-node-b66374b8-a69d-2cb6-3980-23c2cf3fcb8a-cf3fcb86"
-        class="footer-logo-box"
-      >
-        <a
-          data-ix="logo"
-          href="/"
-          aria-current="page"
-          class="footer-logo w-nav-brand w--current"
-        >
-          <img
-            src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/63f822ced2d7941c2bd8fe97_AI%20Small%20Logo.svg"
-            width="90"
-            alt=""
-          />
-        </a>
-        <p class="paragraph small">
-          Built by
-          <a href="https://www.khansuk.com" target="_blank"
-            >Khansuk Digital Agency</a
-          >
-        </p>
-        <div class="spacer _48"></div>
-      </div>
-      <div class="footer-links-container">
-        <h5 class="footer-header">Website</h5>
-        <a href="/features" class="footer-link">Features</a>
-        <a href="/pricing" class="footer-link">Pricing</a>
-        <a href="/faq" class="footer-link">FAQs</a>
-        <a href="/blog" class="footer-link">Blog</a>
-        <a href="#" class="footer-link">Support</a>
-        <a href="/terms-conditions" class="footer-link"
-          >Terms &amp;Conditions</a
-        >
-        <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
-      </div>
-      <div class="footer-links-container">
-        <h5 class="footer-header">Admin</h5>
-        <a href="/admin/style-guide" class="footer-link">Style Guide</a>
-        <a href="/admin/licenses" class="footer-link">Licenses</a>
-        <a href="/admin/instructions" class="footer-link">Instructions</a>
-        <a href="/admin/changelog" class="footer-link">Changelog</a>
-        <a href="/401" class="footer-link">Password</a>
-        <a href="/404" class="footer-link">404</a>
-      </div>
-      <div
-        id="w-node-_32f30c02-3be8-5b74-37a8-a671b034e6d6-cf3fcb86"
-        class="text-box _400px"
-      >
-        <h5 class="footer-header">Newsletter</h5>
-        <p class="paragraph small">
-          Sign up for the latest news, company insights, and AI updates.
-        </p>
-      </div>
-    </div>
-    <div class="spacer _64"></div>
-    <div class="horizontal-line"></div>
-    <div class="lower-footer-grid">
-      <div class="paragraph small no-margin">
-        © 2023 AI. All Rights Reserved.
-      </div>
-      <div
-        id="w-node-_37d13e64-de06-edf8-ab96-0ddb1cc90034-cf3fcb86"
-        class="footer-social-section"
-      >
-        <div class="social-grid">
-          <a
-            href="https://twitter.com/"
-            target="_blank"
-            class="social-link w-inline-block"
-          >
-            <img
-              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad6403ff1cc94_Vector.svg"
-              loading="lazy"
-              alt=""
-              class="social-link-icon"
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            class="social-link w-inline-block"
-          >
-            <img
-              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad642f2f1cc93_LinkedIn%20-%20Negative.svg"
-              loading="lazy"
-              alt=""
-              class="social-link-icon"
-            />
-          </a>
-          <a
-            href="https://www.youtube.com/"
-            target="_blank"
-            class="social-link w-inline-block"
-          >
-            <img
-              src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad6d666f1cc92_Facebook%20-%20Negative.svg"
-              loading="lazy"
-              alt=""
-              class="social-link-icon"
-            />
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+<%= render "layouts/footer" %>
