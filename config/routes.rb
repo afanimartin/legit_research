@@ -5,10 +5,11 @@ Rails.application.routes.draw do
     mount Avo::Engine, at: Avo.configuration.root_path
   end
 
-  # resources :users
-
-  get 'sign_in', to: 'sessions#create'
-  post 'sign_in', to: 'sessions#create'
+  devise_for :users, controllers: {
+    omniauth_callbacks: 'omniauth_callbacks',
+    sessions: 'sessions',
+    registrations: 'registrations'
+  }
   
   get 'contact', to: 'contact#index'
   get 'publications', to: 'publications#index'
@@ -17,7 +18,7 @@ Rails.application.routes.draw do
   get 'privacy', to: 'privacy#index'
   get 'terms', to: 'terms#index'
 
-  get '/auth/:provider/callback', to: 'sessions#create'
-  get '/auth/failure', to: redirect('/')
+  # get 'google_sign_in', to: 'sessions#new'
+  # get 'google_sign_in/create', to: 'sessions#create', as: :create_login
 
 end

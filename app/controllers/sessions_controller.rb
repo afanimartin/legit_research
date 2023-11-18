@@ -1,28 +1,23 @@
 class SessionsController < ApplicationController
+  def new
+  end
+
   def create
-    auth = request.env['omniauth.auth']
-    user = User.find_by(email: auth.info.email)
-
-    if user
-      # user exists, sign them in
-      session[:user_id] = user.id
-      redirect_to user, notice: "Signed in successfully!"
+    if user = authenticate_with_google
+      cookies.signed[:user_id] = user.id
+      redirect_to user
     else
-      # user doesn't exist, create them
-      new_user = User.create(email: auth.info.email, name: auth.info.name)
-
-      if new_user.persisted?
-        # new user created, sign them in
-        session[:user_id] = new_user.id
-        redirect_to new_user, notice: "Account created and signed in!"
-      else
-        redirect_to sessions_path, notice: "Failed to sign in. Please try again."
-      end
+      redirect_to new_session_url, alert: 'authentication_failed'
     end
   end
 
-  def destroy
-    session[:user_id] = nil
-    redirect_to sessions_path, notice: "Signed out successfully!"
-  end
+  private
+    def authenticate_with_google
+      if id_token = flash[:google_sign_in][:id_token]
+        User.find_by google_id: GoogleSignIn::Identity.new(id_token).user_id
+      elsif error = flash[:google_sign_in][:error]
+        logger.error "Google authentication error: #{error}"
+        nil
+      end
+    end
 end
