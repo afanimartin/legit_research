@@ -1,23 +1,8 @@
-class SessionsController < ApplicationController
-  def new
+class SessionsController < Devise::SessionsController
+  def after_sign_out_path_for(_resource_or_scope)
+    new_user_session_path
   end
-
-  def create
-    if user = authenticate_with_google
-      cookies.signed[:user_id] = user.id
-      redirect_to user
-    else
-      redirect_to new_session_url, alert: 'authentication_failed'
-    end
+  def after_sign_in_path_for(resource_or_scope)
+    stored_location_for(resource_or_scope) || root_path
   end
-
-  private
-    def authenticate_with_google
-      if id_token = flash[:google_sign_in][:id_token]
-        User.find_by google_id: GoogleSignIn::Identity.new(id_token).user_id
-      elsif error = flash[:google_sign_in][:error]
-        logger.error "Google authentication error: #{error}"
-        nil
-      end
-    end
 end

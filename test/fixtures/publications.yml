@@ -2,14 +2,8 @@
 
 one:
   title: MyString
-  abstract: MyText
-  views: 1
-  content: MyText
   user: one
 
 two:
   title: MyString
-  abstract: MyText
-  views: 1
-  content: MyText
   user: two

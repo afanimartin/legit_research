@@ -18,7 +18,4 @@ Rails.application.routes.draw do
   get 'privacy', to: 'privacy#index'
   get 'terms', to: 'terms#index'
 
-  # get 'google_sign_in', to: 'sessions#new'
-  # get 'google_sign_in/create', to: 'sessions#create', as: :create_login
-
 end
