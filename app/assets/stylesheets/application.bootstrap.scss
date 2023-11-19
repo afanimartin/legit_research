@@ -6959,3 +6959,34 @@ blockquote {
     grid-column-end: span 1;
   }
 }
+
+// CUSTOM STYLING
+.logged-in-user-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logged-in-user-section img {
+  height: 45%;
+  width: 45%;
+  border-radius: 50%;
+}
+
+.logged-in-user-section button {
+  background-color: #ed1d24;
+  color: whitesmoke;
+  padding: 5px;
+}
+
+.logged-in-user-profile {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logged-in-user-profile img {
+  height: 15%;
+  width: 15%;
+  border-radius: 50%;
+}

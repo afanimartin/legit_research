@@ -31,11 +31,19 @@ class="nav-bar w-nav"
   </nav>
 </div>
 </div>
-<div class="nav-cta-button-container">
-  <%= link_to "Sign in", user_session_path, class: "nav-link w-nav-link" %>
-  <div style="color: white !important"><%= link_to "Get started now", user_session_path, class: "nav-link primary w-nav-link" %></div>
-</div>
+<% if current_user %>
+    <section class="logged-in-user-section">
+      <%= link_to user_profile_path do %>
+        <%= image_tag(current_user.avatar_url) %>
+      <% end %>
+    </section>
+<% else %>
+  <div class="nav-cta-button-container">
+    <div style="color: white !important"><%= link_to "Get started now", user_session_path, class: "nav-link primary w-nav-link" %></div>
+  </div>
+<% end %>
 </nav>
+
 <div class="menu-button w-nav-button">
   <img
     src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad66dc9f1cc3d_Grey%20Hamburger%20Icon.svg"

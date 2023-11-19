@@ -1,0 +1,8 @@
+<%= render "shared/auth_navbar" %>
+<section class="logged-in-user-profile">
+  <%= image_tag(@user.avatar_url) %>
+  <p><strong><%= @user.full_name %></strong> </p>
+  <p><%= @user.email %></p>
+  <%= link_to "Edit Account", edit_user_registration_path %>
+</section>
+<%= render "layouts/footer" %>

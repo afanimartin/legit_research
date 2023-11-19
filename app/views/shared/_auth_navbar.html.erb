@@ -1,12 +1,55 @@
-<div class="sign-up-nav">
-  <%= link_to root_path,
-    class:"footer-logo w-nav-brand w--current" do %>
-    <%= image_tag ("https://res.cloudinary.com/dmyhendcr/image/upload/v1696385443/legit_uploads/legit_research-logos_transparent_h6jpix.png"), width: 80 %>
-  <% end %>
-  <div class="nav-spacer"></div>
-  <div class="sign-in-div">
-    <div class="paragraph-small">Don &#x27;t have an account yet?</div>
-    <div class="spacer _16"></div>
-    <%= link_to user_session_path_path, class: "small-button light no-margin w-button" do %>Sign Up<% end %>
+<div
+data-collapse="small"
+data-animation="default"
+data-duration="400"
+data-easing="ease"
+data-easing2="ease"
+role="banner"
+class="nav-bar w-nav"
+>
+<div class="nav-container w-container">
+<div class="logo-div">
+<%= link_to root_path,
+  class:"footer-logo w-nav-brand w--current" do %>
+  <%= image_tag ("https://res.cloudinary.com/dmyhendcr/image/upload/v1696385443/legit_uploads/legit_research-logos_transparent_h6jpix.png"), width: 80 %>
+<% end %>
+</div>
+<nav role="navigation" class="nav-content w-nav-menu">
+<div class="nav-menu">
+<%= link_to "Pricing", pricing_path, class: "nav-link w-nav-link" %>
+<%= link_to "FAQs", faqs_path, class: "nav-link w-nav-link" %>
+<%= link_to "Publications", publications_path, class: "nav-link w-nav-link" %>
+<%= link_to "Contact", contact_path, class: "nav-link w-nav-link" %>
+<div data-hover="true" data-delay="0" class="dropdown w-dropdown">
+  <div class="nav-dropdown w-dropdown-toggle">
   </div>
+  <nav class="dropdown-list w-dropdown-list">
+    <a href="/contact" class="nav-link w-dropdown-link">Contact</a>
+    <a href="/admin/style-guide" class="nav-link w-dropdown-link"
+      >Style Guide</a
+    >
+  </nav>
+</div>
+</div>
+<% if current_user %>
+    <section class="logged-in-user-section">
+      <%= button_to "Logout", destroy_user_session_path, data: {turbo: "false"}, method: :delete %>
+    </section>
+<% else %>
+  <div class="nav-cta-button-container">
+    <div style="color: white !important"><%= link_to "Get started now", user_session_path, class: "nav-link primary w-nav-link" %></div>
+  </div>
+<% end %>
+</nav>
+
+<div class="menu-button w-nav-button">
+  <img
+    src="https://assets.website-files.com/6398008a5a4ad6e37cf1cc10/6398008a5a4ad66dc9f1cc3d_Grey%20Hamburger%20Icon.svg"
+    loading="lazy"
+    width="24"
+    alt=""
+    class="menu-icon"
+  />
+</div>
+</div>
 </div>

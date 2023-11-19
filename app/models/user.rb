@@ -10,13 +10,23 @@ class User < ApplicationRecord
   belongs_to :role
   belongs_to :category
 
+  # include UniqueId
+ 
+  # self.primary_key = :id 
+  # before_create :generate_unique_id
+
   def self.from_omniauth(auth)
-    where(uid: auth.uid).first_or_create do |user|
-      user.uid = auth.info.uid
+    Rails.logger.debug "Omniauth data: #{auth.inspect}"
+    user = where(uid: auth.uid).first_or_create do |user|
+      Rails.logger.debug "Creating user with email: #{auth.info.email}"
+      user.role_id = 3
+      user.category_id = "q1viQjq7XT7gQ9e17vs3xnbz"
       user.email = auth.info.email
       user.password = Devise.friendly_token[0, 20]
       user.full_name = auth.info.name # assuming the user model has a name
       user.avatar_url = auth.info.image # assuming the user model has an image
     end
+    Rails.logger.debug "User: #{user.inspect}"
+    user
   end
 end
