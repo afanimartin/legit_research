@@ -1,0 +1,26 @@
+<%= render "shared/auth_navbar" %>
+
+<section class="new-publication-section">
+  <%= form_for @publication do |form| %>
+    <div class="mb-3">
+      <%= form.label :title, class: "form-label" %>
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :abstract, class: "form-label" %>
+      <%= form.text_area :abstract, class: "form-control", rows: 7 %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :content, class: "form-label" %>
+      <%= form.text_area :content, class: "form-control", rows: 10 %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.submit "Publish", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</section>
+
+<%= render "layouts/footer" %>

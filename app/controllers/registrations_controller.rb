@@ -3,14 +3,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def update_resource(resource, params)
     if resource.provider == 'google_oauth2'
-
       params.delete(:current_password)
-
-      # Assign 'bio' only if it's a permitted parameter
-      # resource.bio = params[:bio] if params.key?(:bio)
-
-      # Update the resource without password
-      # resource.update_without_password(params)
       resource.update_without_password(params)
     else
       resource.update(params)

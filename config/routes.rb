@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     registrations: 'registrations'
   }
 
+  resources :publications
+
   # Show user profile
   get 'profile', to: 'users#show', as: :user_profile
   

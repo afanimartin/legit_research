@@ -33,7 +33,7 @@ class="nav-bar w-nav"
 </div>
 <% if current_user %>
     <section class="logged-in-user-section">
-      <%= button_to "Logout", destroy_user_session_path, data: {turbo: "false"}, method: :delete %>
+      <%= link_to "Write", new_publication_path %>
     </section>
 <% else %>
   <div class="nav-cta-button-container">

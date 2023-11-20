@@ -6995,3 +6995,32 @@ blockquote {
   width: 45%;
   margin: 30px auto;
 }
+
+.new-publication-section,
+.publication-details-section {
+  width: 50%;
+  margin: 50px auto;
+}
+
+.publication-user-details {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.publication-list-section {
+  text-align: left;
+}
+
+.publication-list-section span,
+.publication-user-details span {
+  color: #6b6b6b;
+  font-size: 14px;
+}
+
+.publication-user-details img {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  margin-right: 10px;
+}

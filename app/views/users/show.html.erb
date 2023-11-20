@@ -4,7 +4,18 @@
   <%= image_tag(@user.avatar_url) %>
   <p><strong><%= @user.full_name %></strong> </p>
   <p><%= @user.bio %></p>
-  <%= link_to "Edit Account", edit_user_registration_path %>
+  <%= link_to "Edit Account ↗", edit_user_registration_path %>
+  <br/>
+   <br/>
+  <section class="logged-in-user-section">
+      <%= button_to "Logout", destroy_user_session_path, data: {turbo: "false"}, method: :delete %>
+  </section>
+  <hr/>
+  <% if @publications.length > 0 %>
+    <%= render "publications/publications", publications: @publications %>
+  <% else %>
+    <h4>No publications yet</h4>
+  <% end %>
 </section>
 
 <%= render "layouts/footer" %>

@@ -21,7 +21,7 @@
 
 <%= button_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %>
 <br>
-<%= link_to "Back", :back %>
+<%= link_to "Back", user_profile_path %>
 </section>
 
 <%= render "layouts/footer" %>
