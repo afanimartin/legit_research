@@ -1,2 +1,11 @@
 <%= render "layouts/navbar" %>
+
+<section class="logged-in-user-profile">
+<% if @publications.length > 0 %>
+    <%= render "publications/publications", publications: @publications %>
+  <% else %>
+    <h4>No publications yet</h4>
+  <% end %>
+</section>
+
 <%= render "layouts/footer" %>
