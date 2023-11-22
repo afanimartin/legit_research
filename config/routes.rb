@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   resources :publications
 
+  resources :comments
+
   # Show user profile
   get 'profile', to: 'users#show', as: :user_profile
   
