@@ -15,9 +15,9 @@
   <br>
   <br>
   <p><%= @publication.content %></p>
-  <%= render "comment", publication: @publication %>
+  <%= render "comments/comment", publication: @publication %>
   <br>
-  <%= render "comments", comments: @publication.comments %>
+  <%= render "comments/comments", comments: @publication.comments %>
 </section>
 
 <%= render "layouts/footer" %>

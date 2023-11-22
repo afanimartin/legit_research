@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_20_010644) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_22_073351) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -41,6 +41,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_20_010644) do
     t.index ["user_id"], name: "index_publications_on_user_id"
   end
 
+  create_table "replies", id: :string, force: :cascade do |t|
+    t.text "content", null: false
+    t.string "comment_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["comment_id"], name: "index_replies_on_comment_id"
+    t.index ["user_id"], name: "index_replies_on_user_id"
+  end
+
   create_table "roles", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -69,6 +79,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_20_010644) do
   add_foreign_key "comments", "publications"
   add_foreign_key "comments", "users"
   add_foreign_key "publications", "users"
+  add_foreign_key "replies", "comments"
+  add_foreign_key "replies", "users"
   add_foreign_key "users", "categories"
   add_foreign_key "users", "roles"
 end

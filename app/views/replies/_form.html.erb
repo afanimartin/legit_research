@@ -1,0 +1,12 @@
+<!-- app/views/replies/_form.html.erb -->
+<section class="reply-section">
+  <%= form_for([comment, reply]) do |f| %>
+    <div class="mb-3">
+      <%= f.label "Add reply", class: "form-label" %>
+      <%= f.text_area :content, class: "form-control", rows: 1 %>
+    </div>
+    <div class="mb-3">
+      <%= f.submit 'Add Reply', class: "btn btn-secondary" %>
+    </div>
+  <% end %>
+</section>

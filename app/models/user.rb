@@ -5,8 +5,9 @@ class User < ApplicationRecord
          :validatable,
          :omniauthable, omniauth_providers: [:google_oauth2]
         
-  has_many :publications
-  has_many :comments
+  has_many :publications, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :replies, dependent: :destroy
   belongs_to :role
   belongs_to :category
 

@@ -1,7 +1,6 @@
-class Comment < ApplicationRecord
+class Reply < ApplicationRecord
+  belongs_to :comment
   belongs_to :user
-  belongs_to :publication
-  has_many :replies, dependent: :destroy
 
   validates :content, presence: true
 

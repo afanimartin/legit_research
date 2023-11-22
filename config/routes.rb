@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/show'
   root 'home#index'
 
   constraints ->(request) { request.env["warden"].user&.role_id == 1 } do
@@ -12,9 +11,13 @@ Rails.application.routes.draw do
     registrations: 'registrations'
   }
 
+  resources :users
+
   resources :publications
 
-  resources :comments
+  resources :comments do
+    resources :replies
+  end
 
   # Show user profile
   get 'profile', to: 'users#show', as: :user_profile

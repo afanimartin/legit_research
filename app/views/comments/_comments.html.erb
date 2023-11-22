@@ -1,0 +1,20 @@
+<% comments.order("created_at desc").each do |comment| %>
+  <div class="comment-user-details">
+    <%= image_tag(comment.user.avatar_url) %>
+    <div>
+      <h5><%= capitalize_string(comment.user.full_name) %></h5>
+      <span style="font-size: 12px"><%= formattedDateTime(comment.created_at) %></span>
+    </div>
+  </div>
+  <p><%= capitalize_string(comment.content) %></p>
+  <!-- Display existing replies -->
+  <section class="reply-section">
+    <% comment.replies.each do |reply| %>
+      <div class="reply">
+        <p><%= image_tag("reply.png", height: 20) %><%= image_tag(reply.user.avatar_url, height: 25) %><%= reply.content %></p>
+      </div>
+    <% end %>
+  </section>
+  <!-- Form for adding a new reply -->
+  <%= render partial: 'replies/form', locals: { comment: comment, reply: Reply.new } %>
+<% end %>
