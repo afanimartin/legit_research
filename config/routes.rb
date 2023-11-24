@@ -13,8 +13,6 @@ Rails.application.routes.draw do
 
   resources :users
 
-  get 'complete_profile', to: 'users#complete_profile'
-
   resources :publications
 
   resources :comments do

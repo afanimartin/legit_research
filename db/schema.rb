@@ -10,19 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_22_130241) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_24_071137) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "categories", id: :string, force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "comments", id: :string, force: :cascade do |t|
     t.string "content"
-    t.bigint "user_id", null: false
+    t.string "user_id", null: false
     t.string "publication_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -35,7 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_22_130241) do
     t.text "abstract", default: "", null: false
     t.integer "views", default: 0
     t.text "content", default: "", null: false
-    t.bigint "user_id", null: false
+    t.string "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_publications_on_user_id"
@@ -46,7 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_22_130241) do
     t.string "comment_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
+    t.string "user_id", null: false
     t.index ["comment_id"], name: "index_replies_on_comment_id"
     t.index ["user_id"], name: "index_replies_on_user_id"
   end
@@ -57,9 +51,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_22_130241) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", id: :string, force: :cascade do |t|
     t.string "full_name"
-    t.string "uid"
     t.string "avatar_url"
     t.string "plan", default: "free", null: false
     t.string "email", default: "", null: false
@@ -70,9 +63,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_22_130241) do
     t.text "bio", default: ""
     t.boolean "completed", default: false
     t.string "provider", default: "google_oauth2", null: false
-    t.string "gender", null: false
-    t.date "date_of_birth", null: false
-    t.string "category_id"
+    t.string "gender"
+    t.date "date_of_birth"
+    t.string "category"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["role_id"], name: "index_users_on_role_id"
   end

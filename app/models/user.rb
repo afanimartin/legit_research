@@ -10,8 +10,6 @@ class User < ApplicationRecord
   has_many :replies, dependent: :destroy
   belongs_to :role
 
-  validates :bio, presence: true
-
   include UniqueId
  
   self.primary_key = :id 
@@ -19,7 +17,7 @@ class User < ApplicationRecord
 
   def self.from_omniauth(auth)
     Rails.logger.debug "Omniauth data: #{auth.inspect}"
-    user = where(uid: auth.uid, provider: auth.provider).first_or_create do |user|
+    user = where(id: auth.uid, provider: auth.provider).first_or_create do |user|
       Rails.logger.debug "Creating user with email: #{auth.info.email}"
       user.role_id = 2
       user.email = auth.info.email
