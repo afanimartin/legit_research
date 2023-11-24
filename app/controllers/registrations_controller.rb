@@ -1,6 +1,4 @@
 class RegistrationsController < Devise::RegistrationsController
-  # before_action :configure_permitted_parameters, if: :devise_controller?
-
   def update_resource(resource, params)
     if resource.provider == 'google_oauth2'
       params.delete(:current_password)
@@ -12,8 +10,7 @@ class RegistrationsController < Devise::RegistrationsController
 
 
   private
-
-    def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:bio)
+    def account_update_params
+      params.require(:user).permit(:bio, :gender, :date_of_birth, :category_id).merge(completed: true)
     end
 end

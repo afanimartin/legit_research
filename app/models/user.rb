@@ -9,21 +9,19 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :replies, dependent: :destroy
   belongs_to :role
-  belongs_to :category
 
   validates :bio, presence: true
 
-  # include UniqueId
+  include UniqueId
  
-  # self.primary_key = :id 
-  # before_create :generate_unique_id
+  self.primary_key = :id 
+  before_create :generate_unique_id
 
   def self.from_omniauth(auth)
     Rails.logger.debug "Omniauth data: #{auth.inspect}"
     user = where(uid: auth.uid, provider: auth.provider).first_or_create do |user|
       Rails.logger.debug "Creating user with email: #{auth.info.email}"
-      user.role_id = 3
-      user.category_id = "q1viQjq7XT7gQ9e17vs3xnbz"
+      user.role_id = 2
       user.email = auth.info.email
       user.password = Devise.friendly_token[0, 20]
       user.full_name = auth.info.name # assuming the user model has a name

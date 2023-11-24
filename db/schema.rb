@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_22_073351) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_22_130241) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -67,11 +67,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_22_073351) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "role_id"
-    t.string "category_id", null: false
     t.text "bio", default: ""
     t.boolean "completed", default: false
     t.string "provider", default: "google_oauth2", null: false
-    t.index ["category_id"], name: "index_users_on_category_id"
+    t.string "gender", null: false
+    t.date "date_of_birth", null: false
+    t.string "category_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["role_id"], name: "index_users_on_role_id"
   end
@@ -81,6 +82,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_22_073351) do
   add_foreign_key "publications", "users"
   add_foreign_key "replies", "comments"
   add_foreign_key "replies", "users"
-  add_foreign_key "users", "categories"
   add_foreign_key "users", "roles"
 end
