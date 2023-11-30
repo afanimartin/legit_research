@@ -6,4 +6,8 @@ module ApplicationHelper
   def capitalize_string(str)
     str.capitalize
   end
+
+  def is_user_profile_complete
+    current_user.completed
+  end
 end

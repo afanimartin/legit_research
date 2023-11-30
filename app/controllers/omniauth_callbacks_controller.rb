@@ -17,7 +17,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     new_user_session_path
   end
   def after_sign_in_path_for(resource_or_scope)
-    stored_location_for(resource_or_scope) || user_profile_path
+    if current_user && current_user.completed
+      stored_location_for(resource_or_scope) || user_profile_path
+    else
+      edit_user_registration_path
+    end
   end
 
 

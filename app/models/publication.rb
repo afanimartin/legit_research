@@ -10,4 +10,6 @@ class Publication < ApplicationRecord
  
   self.primary_key = :id
   before_create :generate_unique_id
+
+  has_rich_text :content
 end

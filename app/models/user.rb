@@ -17,7 +17,7 @@ class User < ApplicationRecord
 
   def self.from_omniauth(auth)
     Rails.logger.debug "Omniauth data: #{auth.inspect}"
-    user = where(id: auth.uid, provider: auth.provider).first_or_create do |user|
+    user = where(provider: auth.provider).first_or_create do |user|
       Rails.logger.debug "Creating user with email: #{auth.info.email}"
       user.role_id = 2
       user.email = auth.info.email

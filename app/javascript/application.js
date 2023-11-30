@@ -26272,3 +26272,5 @@ Webflow.require("ix2").init({
     ],
   },
 });
+import "trix"
+import "@rails/actiontext"

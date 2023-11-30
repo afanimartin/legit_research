@@ -33,7 +33,11 @@ class="nav-bar w-nav"
 </div>
 <% if current_user %>
     <section class="logged-in-user-section">
-      <%= link_to "Write", new_publication_path %>
+      <% if is_user_profile_complete %>
+        <%= link_to "Write", new_publication_path %>
+      <% else %>
+        <%= link_to "Complete Registration" %>
+      <% end %>
     </section>
 <% else %>
   <div class="nav-cta-button-container">

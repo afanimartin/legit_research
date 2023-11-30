@@ -1,5 +1,7 @@
 # app/controllers/replies_controller.rb
 class RepliesController < ApplicationController
+  before_action :authenticate_user!
+  
   def create
     @comment = Comment.find(params[:comment_id])
     @reply = current_user.replies.build(reply_params.merge(comment: @comment))
