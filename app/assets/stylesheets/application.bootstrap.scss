@@ -7055,7 +7055,7 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px 0;
+  padding-bottom: 25px;
 }
 
 .google-login form > input {
@@ -7065,5 +7065,5 @@ blockquote {
 .google-login form #form-links {
   border-radius: 10px;
   border: 1px solid #000;
-  padding: 10px;
+  padding: 5px;
 }
