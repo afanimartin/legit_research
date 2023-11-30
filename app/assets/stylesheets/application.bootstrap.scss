@@ -1,5 +1,6 @@
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons";
+@import "actiontext.css";
 
 html {
   font-family: sans-serif;
@@ -7040,4 +7041,29 @@ blockquote {
   border-radius: 50%;
   margin-right: 5px;
 }
-@import 'actiontext.css';
+
+.google-login {
+  background-color: #fff;
+  width: 30%;
+  margin: 100px auto;
+  height: 40%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.google-login form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.google-login form > input {
+  border: none;
+}
+
+.google-login form #form-links {
+  border-radius: 10px;
+  border: 1px solid #000;
+  padding: 10px;
+}

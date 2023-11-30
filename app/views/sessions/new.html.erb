@@ -1,10 +1,19 @@
-<%- if devise_mapping.omniauthable? %>
-  <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= form_for "Login",
-      url: omniauth_authorize_path(resource_name, provider),
-      method: :post,
-      data: {turbo: "false"} do |f| %>
-        <%= f.submit "Login", type: "image", src: url_for("/assets/google-logo.webp") %>
-    <% end %>  
+<%= render "layouts/navbar" %>
+
+<section class="google-login">
+  <%- if devise_mapping.omniauthable? %>
+    <%- resource_class.omniauth_providers.each do |provider| %>
+      <%= form_for "Login",
+        url: omniauth_authorize_path(resource_name, provider),
+        method: :post,
+        data: {turbo: "false"} do |f| %>
+          <div id="form-links">
+            <%= image_tag("google_logo.png", height: 28) %>
+            <%= f.submit "Sign in with Google", class: "btn btn-default"%>
+          </div>
+      <% end %>  
+    <% end %>
   <% end %>
-<% end %>
+</section>
+
+<%= render "layouts/footer" %>
