@@ -14,7 +14,7 @@
   <p><%= @publication.abstract %></p>
   <br>
   <br>
-  <p><%= rich_text_display(@publication.content) %></p>
+  <p><%= @publication.content %></p>
   <%= render "comments/comment", publication: @publication %>
   <br>
   <%= render "comments/comments", comments: @publication.comments %>
