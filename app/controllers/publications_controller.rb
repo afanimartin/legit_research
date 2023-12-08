@@ -1,9 +1,10 @@
 class PublicationsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :show_publication, only: [:show]
+  before_action :set_publication, only: [:show]
 
   def index
-    @publications = Publication.all
+    @q = Publication.ransack(params[:q])
+    @publications = @q.result(distinct: true).includes(:user)
   end
 
   def show
@@ -23,8 +24,20 @@ class PublicationsController < ApplicationController
     end
   end
 
+  def cite
+    @publication = Publication.find(params[:publication_id])
+    # Create a citation associated with the current user for this publication
+    @citation = @publication.citations.new(user: current_user)
+
+    if @citation.save
+      # Redirect or render success message
+    else
+      # Handle errors
+    end
+  end
+
   private
-    def show_publication
+    def set_publication
       @publication = Publication.find(params[:id])
     end
 

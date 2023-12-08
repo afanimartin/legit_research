@@ -13,7 +13,11 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :publications
+  resources :publications do
+    member do 
+      post 'cite'
+    end
+  end
 
   resources :comments do
     resources :replies

@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :publications, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :replies, dependent: :destroy
+  has_many :citations, dependent: :destroy
   belongs_to :role
 
   include UniqueId
