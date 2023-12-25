@@ -11,9 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_12_08_052916) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -101,15 +98,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_08_052916) do
   create_table "users", id: :string, force: :cascade do |t|
     t.string "full_name"
     t.string "avatar_url"
+    t.string "provider"
     t.string "plan", default: "free", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "role_id"
+    t.integer "role_id"
     t.text "bio", default: ""
     t.boolean "completed", default: false
-    t.string "provider", default: "google_oauth2", null: false
     t.string "gender"
     t.date "date_of_birth"
     t.string "category"
