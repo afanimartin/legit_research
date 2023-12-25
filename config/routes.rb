@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root 'home#index'
 
-  constraints ->(request) { request.env["warden"].user&.role_id == 1 } do
+  # constraints ->(request) { request.env["warden"].admin } do
     mount Avo::Engine, at: Avo.configuration.root_path
-  end
+  # end
 
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -13,6 +13,12 @@ Rails.application.routes.draw do
 
   resources :users
 
+  # Admin authentication routes
+  resources :admins, only: [:create]
+
+  get "admin", to: "admin_sessions#new"
+  post "admin", to: "admin_sessions#create"
+  
   resources :publications do
     member do 
       post 'cite'
