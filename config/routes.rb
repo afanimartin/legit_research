@@ -16,8 +16,8 @@ Rails.application.routes.draw do
   # Admin authentication routes
   resources :admins, only: [:create]
 
-  get "admin", to: "admin_sessions#new"
-  post "admin", to: "admin_sessions#create"
+  get "admin", to: "admins#new"
+  post "admin", to: "admins#create"
   
   resources :publications do
     member do 

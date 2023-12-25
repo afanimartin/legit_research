@@ -5,7 +5,7 @@
       <p>Welcome back, it's good to see you.</p>
     </div>
     <div class="spacer _16"></div>
-    <%= form_for(:admin, url: admin_sessions_path) do |f| %>
+    <%= form_for(:admin, url: admins_path) do |f| %>
       <div class="mb-3">
         <%= f.label :email %>
         <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Enter your email" %>
@@ -20,8 +20,5 @@
         <%= f.submit "Log in", class: "btn btn-primary" %>
       </div>
     <% end %>
-    <p class="paragraph small no-margin">
-      Forgot your password? <a href="/reset-password">Reset it here.</a>
-    </p>
   </div>
 </div>
