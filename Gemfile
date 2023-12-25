@@ -1,11 +1,11 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.3"
+ruby "3.0.6"
 
 gem "rails", "~> 7.0.8"
 gem "sprockets-rails"
-gem "pg", "~> 1.1"
+gem "pg"
 gem "puma", "~> 5.0"
 gem "avo", ">= 3.0.1.beta9", source: "https://packager.dev/avo-hq/"
 gem "dotenv-rails"
