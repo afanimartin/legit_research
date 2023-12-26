@@ -1,4 +1,4 @@
-lock "~> 3.17.3"
+lock "~> 3.18.0"
 
 set :application, 'legit'
 set :repo_url, 'git@github.com:afanimartin/legit.git'
