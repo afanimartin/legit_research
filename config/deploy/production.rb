@@ -49,19 +49,19 @@
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-  set :application, 'legit_research'
-	set :repo_url, 'git@github.com:afanimartin/legit_research.git'
+  # set :application, 'legit_research'
+	# set :repo_url, 'git@github.com:afanimartin/legit_research.git'
 
-	# Default branch is :master
-	ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+	# # Default branch is :master
+	# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-	# Default deploy_to directory is /var/www/my_app_name
-	set :deploy_to, '/home/deploy/legit_research'
+	# # Default deploy_to directory is /var/www/my_app_name
+	# set :deploy_to, '/home/deploy/legit_research'
 
-	# Default value for :linked_files is []
-	append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'tmp/webpacker', 'vendor', '.bundle', 'public/system', 'public/      uploads', 'storage'
+	# # Default value for :linked_files is []
+	# append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'tmp/webpacker', 'vendor', '.bundle', 'public/system', 'public/      uploads', 'storage'
 
-	# Only keep the last 5 releases to save disk space
-	set :keep_releases, 5
+	# # Only keep the last 5 releases to save disk space
+	# set :keep_releases, 5
 
 server '143.110.188.35', user: 'deploy', roles: %w{app db web}
