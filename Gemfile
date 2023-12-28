@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.6"
+ruby "3.0.3"
 
 gem "rails", "~> 7.0.8"
 gem "sprockets-rails"
@@ -14,7 +14,6 @@ gem "devise"
 gem "omniauth"
 gem "omniauth-google-oauth2"
 gem "omniauth-rails_csrf_protection"
-gem "strscan", "3.0.4"
 gem "ransack"
 gem "jsbundling-rails"
 gem "turbo-rails"

@@ -8,5 +8,6 @@ class Avo::Resources::Publication < Avo::BaseResource
     field :id, as: :id
     field :title, as: :text
     field :user, as: :belongs_to
+    field :comments, as: :has_many
   end
 end

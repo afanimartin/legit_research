@@ -307,7 +307,6 @@ GEM
     stimulus-rails (1.2.2)
       railties (>= 6.0.0)
     stringio (3.0.8)
-    strscan (3.0.4)
     thor (1.2.2)
     timeout (0.4.0)
     turbo-rails (1.4.0)
@@ -367,13 +366,12 @@ DEPENDENCIES
   sprockets-rails
   sqlite3
   stimulus-rails
-  strscan (= 3.0.4)
   turbo-rails
   tzinfo-data
   web-console
 
 RUBY VERSION
-   ruby 3.0.6p216
+   ruby 3.0.3p157
 
 BUNDLED WITH
    2.4.15
