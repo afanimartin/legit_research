@@ -1,5 +1,5 @@
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   encoding: unicode
   timeout: 5000
   pool: 5
