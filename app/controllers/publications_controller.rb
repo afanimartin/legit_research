@@ -30,9 +30,9 @@ class PublicationsController < ApplicationController
     @citation = @publication.citations.new(user: current_user)
 
     if @citation.save
-      # Redirect or render success message
+      redirect_to @publication
     else
-      # Handle errors
+      render :new
     end
   end
 
