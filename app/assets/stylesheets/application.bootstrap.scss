@@ -7076,3 +7076,13 @@ blockquote {
 .google-login p {
   padding: 10px;
 }
+
+@media screen and (max-width: 425px) {
+  .google-login {
+    width: 90%;
+  }
+
+  .privacy-policy-terms {
+    width: 95%;
+  }
+}
