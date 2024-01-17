@@ -7077,6 +7077,15 @@ blockquote {
   padding: 10px;
 }
 
+#faqAccordion {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#faqAccordion > i {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 425px) {
   .google-login {
     width: 90%;

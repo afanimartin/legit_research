@@ -1,8 +1,7 @@
 // Entry point for the build script in your package.json
-import "@hotwired/turbo-rails"
-import "./controllers"
-import * as bootstrap from "bootstrap"
-
+import "@hotwired/turbo-rails";
+import "./controllers";
+import * as bootstrap from "bootstrap";
 
 /*!
  * Webflow: Front-end site library
@@ -15535,8 +15534,7 @@ import * as bootstrap from "bootstrap"
       var getFilterDefaults = function getFilterDefaults(actionState, filters) {
         return filters.reduce(function (result, filter) {
           if (result[filter.type] == null) {
-            result[filter.type] =
-              filterDefaults[filter.type]; // $FlowFixMe - property `saturation` (did you mean `saturate`?) is missing in `filterDefaults`
+            result[filter.type] = filterDefaults[filter.type]; // $FlowFixMe - property `saturation` (did you mean `saturate`?) is missing in `filterDefaults`
           }
 
           return result;
@@ -19655,7 +19653,8 @@ import * as bootstrap from "bootstrap"
         }),
         (0, _defineProperty2["default"])(_default2, MOUSE_MOVE, {
           types: "mousemove mouseout scroll",
-          handler: function handler(_ref8) { // $FlowFixMe
+          handler: function handler(_ref8) {
+            // $FlowFixMe
             var store = _ref8.store,
               element = _ref8.element,
               eventConfig = _ref8.eventConfig,
@@ -19829,7 +19828,8 @@ import * as bootstrap from "bootstrap"
         }),
         (0, _defineProperty2["default"])(_default2, SCROLLING_IN_VIEW, {
           types: SCROLL_EVENT_TYPES,
-          handler: function handler(_ref10) { // $FlowFixMe
+          handler: function handler(_ref10) {
+            // $FlowFixMe
             var element = _ref10.element,
               store = _ref10.store,
               eventConfig = _ref10.eventConfig,
@@ -26272,5 +26272,5 @@ Webflow.require("ix2").init({
     ],
   },
 });
-import "trix"
-import "@rails/actiontext"
+import "trix";
+import "@rails/actiontext";

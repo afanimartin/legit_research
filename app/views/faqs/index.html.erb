@@ -1,2 +1,103 @@
 <%= render "layouts/navbar" %>
+<div class="container mt-5">
+  <div class="accordion" id="faqAccordion">
+    <!-- Question 1 -->
+    <div class="card">
+      <div class="card-header" id="question1">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#answer1" aria-expanded="true" aria-controls="answer1">
+            <i class="bi bi-arrow-down-circle"></i> What is the purpose of the research publication app?
+          </button>
+        </h5>
+      </div>
+
+      <div id="answer1" class="collapse show" aria-labelledby="question1" data-parent="#faqAccordion">
+        <div class="card-body">
+          Our research publication app serves as a platform for scholars and researchers to publish and access high-quality academic content. It facilitates the dissemination of knowledge and fosters collaboration within the academic community.
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Question 2 -->
+    <div class="card">
+      <div class="card-header" id="question2">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#answer2" aria-expanded="true" aria-controls="answer1">
+            <i class="bi bi-arrow-down-circle"></i> Can I track the status of my submitted paper?
+          </button>
+        </h5>
+      </div>
+
+      <div id="answer2" class="collapse show" aria-labelledby="question2" data-parent="#faqAccordion">
+        <div class="card-body">
+          Yes, you can track the status of your submitted paper by logging into your account and checking the submission dashboard. We provide regular updates on the progress of your paper through different stages of the review process
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- Question 3 -->
+    <div class="card">
+      <div class="card-header" id="question3">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#answer3" aria-expanded="true" aria-controls="answer3">
+            <i class="bi bi-arrow-down-circle"></i> Are there opportunities for collaboration and networking?
+          </button>
+        </h5>
+      </div>
+
+      <div id="answer3" class="collapse show" aria-labelledby="question3" data-parent="#faqAccordion">
+        <div class="card-body">
+          Absolutely! Our app provides various features for networking, collaboration, and discussion. Engage with other researchers, join forums, and participate in academic conversations to expand your network and stay updated on the latest research trends.
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- Question 4 -->
+    <div class="card">
+      <div class="card-header" id="question4">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#answer4" aria-expanded="true" aria-controls="answer4">
+            <i class="bi bi-arrow-down-circle"></i> How is the review process conducted for submitted papers?
+          </button>
+        </h5>
+      </div>
+
+      <div id="answer4" class="collapse show" aria-labelledby="question4" data-parent="#faqAccordion">
+        <div class="card-body">
+          All submitted papers undergo a rigorous peer-review process. Our team of expert reviewers evaluates the content based on relevance, originality, methodology, and overall quality. Authors receive feedback to enhance the scholarly impact of their work.
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- Question 5 -->
+    <div class="card">
+      <div class="card-header" id="question5">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#answer5" aria-expanded="true" aria-controls="answer5">
+            <i class="bi bi-arrow-down-circle"></i> What types of content are accepted for publication?
+          </button>
+        </h5>
+      </div>
+
+      <div id="answer5" class="collapse show" aria-labelledby="question5" data-parent="#faqAccordion">
+        <div class="card-body">
+          We accept a wide range of academic content, including research papers, articles, conference papers, and more. Our focus is on original and quality contributions across various disciplines.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Bootstrap and jQuery scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <%= render "layouts/footer" %>
