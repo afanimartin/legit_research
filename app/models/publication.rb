@@ -5,7 +5,6 @@ class Publication < ApplicationRecord
 
   validates :title, presence: true
   validates :abstract, presence: true
-  validates :content, presence: true
 
   include UniqueId
  

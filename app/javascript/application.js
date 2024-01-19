@@ -1,6 +1,8 @@
 // Entry point for the build script in your package.json
 import "@hotwired/turbo-rails";
 import "./controllers";
+import "trix";
+import "@rails/actiontext";
 import * as bootstrap from "bootstrap";
 
 /*!
@@ -26272,5 +26274,5 @@ Webflow.require("ix2").init({
     ],
   },
 });
-import "trix";
-import "@rails/actiontext";
+import "trix"
+import "@rails/actiontext"

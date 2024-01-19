@@ -13,8 +13,8 @@
   <b><h3>Abstract</h3></b>
   <p><%= @publication.abstract %></p>
   <br>
+  <p class="trix-content"><%= @publication.content %></p>
   <br>
-  <p><%= @publication.content %></p>
   <%= render "comments/comment", publication: @publication %>
   <br>
   <%= render "comments/comments", comments: @publication.comments %>

@@ -8,5 +8,6 @@
 
 Role.create(name:"admin")
 Role.create(name:"user")
+Role.create(name:"editor")
 
 Admin.create(email:'baya@legitresearch.org',password:'baya12345')

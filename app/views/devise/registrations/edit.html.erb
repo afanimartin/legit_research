@@ -15,18 +15,13 @@
   </div>
 
   <div class="mb-3">
-    <%= f.label :category, class: "form-label" %>
-    <%= f.select :category, options_for_select(['Student', 'Lecturer', 'Professor'], @user.category), prompt: 'Select gender' %>
-  </div>
-
-  <div class="mb-3">
     <%= f.label :date_of_birth, class: "form-label" %>
     <%= f.date_select :date_of_birth, start_year: Date.current.year - 100, end_year: Date.current.year, prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, class: "form-control" %>
   </div>
 
   <div class="actions">
     <%= f.submit 'Complete registration' %>
-  </div>
+  </div>  
 <% end %>
 
 </section>

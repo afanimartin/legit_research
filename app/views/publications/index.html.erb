@@ -2,18 +2,10 @@
 
 <section class="logged-in-user-profile">
   <% if @publications.length > 0 %>
-    <br>
-    <br>
-    <%= search_form_for @q do |f| %>
-      <%= f.search_field :title, placeholder: "Search publications...", class: "form-control" %><br>
-      <%= f.submit "Search", class: "btn btn-primary" %>
-    <% end %>
-    <br>
-    <br>
     <%= render "publications/publications", publications: @publications %>
-    <% else %>
-      <h4>No publications yet</h4>
-    <% end %>
-  </section>
+  <% else %>
+    <h4>No publications yet</h4>
+  <% end %>
+</section>
 
 <%= render "layouts/footer" %>
