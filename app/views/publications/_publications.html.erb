@@ -1,6 +1,6 @@
 <section class="publication-list-section">
   <% publications.each do |publication| %>
-    <span><%= formattedDateTime(publication.created_at) %></span>
+    <span><%= formattedDateTime(publication.created_at) %>, citations(<%= publication.citations.count %>)</span>
     <h4><%= link_to publication.title, publication_path(publication) %></h4>
     <p><%= publication.abstract %></p>
   <% end %>

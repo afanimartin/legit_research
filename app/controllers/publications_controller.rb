@@ -17,6 +17,9 @@ class PublicationsController < ApplicationController
     @publication = Publication.new(publication_params)
 
     if @publication.save
+      cited_publication = Publication.find_by(id: params[:publication][:id])
+      Citation.create(publication_id: cited_publication.id, user_id: current_user.id) if cited_publication
+
       redirect_to user_profile_path
     else
       render :new

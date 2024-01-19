@@ -8,6 +8,10 @@
     </div>
 
     <div class="mb-3">
+      <%= form.select :id, Publication.all.collect { |p| [ p.title, p.id ] }, include_blank: "Select publication to cite", class: "custom-select" %>
+    </div>
+
+    <div class="mb-3">
       <%= form.label :abstract, class: "form-label" %>
       <%= form.text_area :abstract, class: "form-control" %>
     </div>
