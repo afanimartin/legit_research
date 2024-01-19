@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_25_085906) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_19_071736) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -81,7 +81,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_25_085906) do
     t.boolean "completed", default: false
     t.string "gender"
     t.date "date_of_birth"
-    t.string "category"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["role_id"], name: "index_users_on_role_id"
   end

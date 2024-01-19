@@ -13,7 +13,7 @@
   <b><h3>Abstract</h3></b>
   <p><%= @publication.abstract %></p>
   <br>
-  <p class="trix-content"><%= @publication.content %></p>
+  <p><%= simple_format(@publication.content) %></p>
   <br>
   <%= render "comments/comment", publication: @publication %>
   <br>

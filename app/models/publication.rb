@@ -5,13 +5,12 @@ class Publication < ApplicationRecord
 
   validates :title, presence: true
   validates :abstract, presence: true
+  validates :content, presence: true
 
   include UniqueId
  
   self.primary_key = :id
   before_create :generate_unique_id
-
-  has_rich_text :content
 
   def self.ransackable_associations(*)
     ['user']
