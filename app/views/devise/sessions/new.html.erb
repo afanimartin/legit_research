@@ -1,7 +1,18 @@
 <div
   id="w-node-e589e84a-0ba8-c850-6ac1-a4c50ec4c3b3-bdf1cc2e"
       class="full-page-wrapper">
-  <%= render "shared/auth_navbar" %>
+        <div class="sign-up-nav">
+  <%= link_to root_path,
+    class:"footer-logo w-nav-brand w--current" do %>
+    <%= image_tag ("https://res.cloudinary.com/dmyhendcr/image/upload/v1696385443/legit_uploads/legit_research-logos_transparent_h6jpix.png"), width: 80 %>
+  <% end %>
+  <div class="nav-spacer"></div>
+  <div class="sign-in-div">
+    <div class="paragraph-small">Need an account?</div>
+    <div class="spacer _16"></div>
+    <%= link_to new_user_registration_path, class: "small-button light no-margin w-button" do %>Sign Up<% end %>
+  </div>
+</div>
   <div class="center-card">
           <div class="text-box">
             <h1 class="heading h3">Sign In</h1>
@@ -29,7 +40,7 @@
     </div>
   <% end %>
   <p class="paragraph small no-margin">
-          Forgot your password? <a href="/reset-password">Reset it here.</a>
+          Need an account? <%= link_to "Sign up", new_user_registration_path %>
         </p>
 </div>
 

@@ -5,9 +5,8 @@ default: &default
   pool: 5
 
 development:
-  <<: *default
+  adapter: sqlite3
   database: legit_research_development
-  username: postgres
 
 test:
   <<: *default

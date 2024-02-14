@@ -5,6 +5,38 @@ import "trix";
 import "@rails/actiontext";
 import * as bootstrap from "bootstrap";
 
+  document.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById('login_form');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        credentials: 'same-origin', // Include cookies in the request
+        headers: {
+          'X-CSRF-Token': document.querySelector('[name="csrf-token"]').content,
+          'Accept': 'application/javascript', // Expect a JavaScript response
+        },
+        body: formData
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(script => {
+        eval(script); // Execute the JavaScript response
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    });
+  });
+
+
 /*!
  * Webflow: Front-end site library
  * @license MIT

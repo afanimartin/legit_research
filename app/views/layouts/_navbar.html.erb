@@ -34,13 +34,9 @@ class="nav-bar w-nav"
 <% if current_user %>
     <section class="logged-in-user-section">
       <% if current_user.completed %>
-        <%= link_to user_profile_path do %>
-          <%= image_tag(current_user.avatar_url) %>
-        <% end %>
+      <%= link_to "See profile", user_path(current_user) %>
       <% else %>
-        <%= link_to edit_user_registration_path do %>
-          <%= image_tag(current_user.avatar_url) %>
-        <% end %>
+        <%= link_to "Edit profile", edit_user_registration_path %>
       <% end %>
     </section>
 <% else %>

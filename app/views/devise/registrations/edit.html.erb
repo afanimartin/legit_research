@@ -19,6 +19,11 @@
     <%= f.date_select :date_of_birth, start_year: Date.current.year - 100, end_year: Date.current.year, prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, class: "form-control", required: true %>
   </div>
 
+  <div class="mb-3">
+    <%= f.label :current_password, class: "form-label" %>
+    <%= f.password_field :current_password, class: "form-control", required: true %>
+  </div>
+
   <div class="actions">
     <%= f.submit 'Complete registration' %>
   </div>  

@@ -1,0 +1,20 @@
+current directory: /Users/macbookpro/legit_research/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.17.0/ext/bootsnap
+/Users/macbookpro/.rbenv/versions/3.0.6/bin/ruby -I /Users/macbookpro/.rbenv/versions/3.0.6/lib/ruby/3.0.0 -r ./siteconf20240213-2294-62tyiw.rb extconf.rb
+creating Makefile
+
+current directory: /Users/macbookpro/legit_research/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.17.0/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /Users/macbookpro/legit_research/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.17.0/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+bootsnap.c:822:10: warning: unused variable 'contents' [-Wunused-variable]
+  char * contents = NULL;
+         ^
+1 warning generated.
+linking shared-object bootsnap/bootsnap.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.0'
+
+current directory: /Users/macbookpro/legit_research/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.17.0/ext/bootsnap
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20240213-2294-8gvgi9/bootsnap

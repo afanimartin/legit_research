@@ -3,9 +3,7 @@
 <section class="publication-details-section">
   <h2><b><%= @publication.title %></b></h2>
   <div class="publication-user-details">
-    <%= image_tag(@publication.user.avatar_url) %>
     <div>
-      <h4><%= capitalize_string(@publication.user.full_name) %><br>
       <span><%= formattedDateTime(@publication.created_at) %></span>
     </div>
   </div>
