@@ -13,35 +13,35 @@
     <%= link_to new_user_registration_path, class: "small-button light no-margin w-button" do %>Sign Up<% end %>
   </div>
 </div>
-  <div class="center-card">
-          <div class="text-box">
-            <h1 class="heading h3">Sign In</h1>
-            <p>Welcome back, it &#x27;s good to see you.</p>
-          </div>
-          <div class="spacer _16"></div>
+  
+<div class="center-card">
+  <div class="text-box">
+    <h1 class="heading h3">Sign In</h1>
+    <p>Welcome back, it &#x27;s good to see you.</p>
+  </div>
+
+  <div class="spacer _16"></div>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="mb-3">
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Enter your email" %>
-    </div>
-    <br>
-    <div class="mb-3">
-      <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "*******" %>
-    </div>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-    <% if devise_mapping.rememberable? %>
-      <div class="mb-3">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
-      </div>
-    <% end %>
+  <div class="mb-3">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Enter your email" %>
+  </div>
+  <br>
+  <div class="mb-3">
+    <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "*******" %>
+  </div>
 
+  <% if devise_mapping.rememberable? %>
+    <div class="mb-3">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
     <div class="mb-3">
       <%= f.submit "Log in", class: "btn btn-primary" %>
     </div>
   <% end %>
-  <p class="paragraph small no-margin">
-          Need an account? <%= link_to "Sign up", new_user_registration_path %>
-        </p>
+  <p class="paragraph small no-margin">Need an account? <%= link_to "Sign up", new_user_registration_path %></p>
 </div>
-
 </div>
