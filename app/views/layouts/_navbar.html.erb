@@ -36,7 +36,7 @@ class="nav-bar w-nav"
       <% if current_user.completed %>
       <%= link_to "See profile", user_path(current_user) %>
       <% else %>
-        <%= link_to "Edit profile", edit_user_registration_path %>
+        <%= link_to "Complete profile", edit_user_registration_path %>
       <% end %>
     </section>
 <% else %>

@@ -1,6 +1,7 @@
 <%= render "shared/auth_navbar" %>
 
 <section class="logged-in-user-profile">
+  <h3><%= capitalize_string(@user.full_name) %></h3>
   <p><%= @user.bio %></p>
   <%= link_to "Edit Account ↗", edit_user_registration_path %>
   <br/>
