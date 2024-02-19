@@ -1,34 +1,40 @@
-<%= form_for @publication, url: publication_path(@publication), method: :patch do |f| %>
-  <% if @publication.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@publication.errors.count, "error") %> prohibited this publication from being saved:</h2>
+<%= render "layouts/navbar" %>
 
-      <ul>
-      <% @publication.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<section class="edit-publication" style="width: 45%; margin: 30px auto;">
+  <%= form_for @publication, url: publication_path(@publication), method: :patch do |f| %>
+    <% if @publication.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@publication.errors.count, "error") %> prohibited this publication from being saved:</h2>
+
+        <ul>
+        <% @publication.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="mb-3">
+      <%= f.label :title %>
+      <%= f.text_field :title, id: :publication_title, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :abstract %>
+      <%= f.text_area :abstract, id: :publication_abstract, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :content %>
+      <%= f.text_area :content, id: :publication_content, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.submit "Update Publication", class: "btn btn-primary" %>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, id: :publication_title %>
-  </div>
+  <%= link_to 'Back', publications_path %>
+</section>
 
-  <div class="field">
-    <%= f.label :abstract %><br>
-    <%= f.text_area :abstract, id: :publication_abstract %>
-  </div>
-
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content, id: :publication_content %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update Publication" %>
-  </div>
-<% end %>
-
-<%= link_to 'Back', publications_path %>
+<%= render "layouts/navbar" %>

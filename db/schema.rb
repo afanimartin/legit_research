@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_02_19_081806) do
+ActiveRecord::Schema[7.0].define(version: 2024_02_19_131249) do
   create_table "admins", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
@@ -45,6 +45,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_19_081806) do
     t.string "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "status_id", null: false
+    t.index ["status_id"], name: "index_publications_on_status_id"
     t.index ["user_id"], name: "index_publications_on_user_id"
   end
 
@@ -60,6 +62,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_19_081806) do
 
   create_table "roles", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "statuses", force: :cascade do |t|
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -84,6 +92,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_19_081806) do
   add_foreign_key "citations", "users"
   add_foreign_key "comments", "publications"
   add_foreign_key "comments", "users"
+  add_foreign_key "publications", "statuses"
   add_foreign_key "publications", "users"
   add_foreign_key "replies", "comments"
   add_foreign_key "replies", "users"

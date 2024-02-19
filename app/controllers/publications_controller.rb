@@ -49,7 +49,7 @@ class PublicationsController < ApplicationController
     end
 
     def publication_params
-      params.require(:publication).permit(:title, :abstract, :content).merge(user_id: current_user.id)
+      params.require(:publication).permit(:title, :abstract, :content).merge(user_id: current_user.id, status_id: 1)
     end
 
     def authorize_user!
