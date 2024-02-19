@@ -1,6 +1,7 @@
 class PublicationsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_publication, only: [:show]
+  before_action :set_publication, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_user!, only: [:edit, :update, :destroy]
 
   def index
     @publications = Publication.all.order(:created_at => :desc)
@@ -26,6 +27,22 @@ class PublicationsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @publication.update(publication_params)
+      redirect_to publication_path(@publication), notice: 'Publication was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @publication.destroy
+    redirect_to publications_path, notice: 'Publication was successfully destroyed.'
+  end
+
   private
     def set_publication
       @publication = Publication.find(params[:id])
@@ -33,5 +50,9 @@ class PublicationsController < ApplicationController
 
     def publication_params
       params.require(:publication).permit(:title, :abstract, :content).merge(user_id: current_user.id)
+    end
+
+    def authorize_user!
+      redirect_to publications_path, alert: 'You are not authorized to perform this action.' unless @publication.user_id == current_user.id
     end
 end

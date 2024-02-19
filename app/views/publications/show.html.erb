@@ -4,7 +4,7 @@
   <h2><b><%= @publication.title %></b></h2>
   <div class="publication-user-details">
     <div>
-      <span><%= capitalize_string(@publication.user.full_name) %> | <%= formattedDateTime(@publication.created_at) %></span>
+      <span><%= capitalize_string(@publication.user.full_name) %> | <%= formattedDateTime(@publication.created_at) %> | <%= link_to "Edit", edit_publication_path %> | <%= link_to "Delete", publication_path(@publication), method: :delete, data: { confirm: 'Are you sure?' } %></span>
     </div>
   </div>
   <hr>
