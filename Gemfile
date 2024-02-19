@@ -11,8 +11,8 @@ gem "puma", "~> 5.0"
 gem "avo", ">= 3.0.1.beta9", source: "https://packager.dev/avo-hq/"
 gem "dotenv-rails"
 gem "devise"
-gem "omniauth"
-gem "omniauth-google-oauth2"
+gem 'omniauth-oauth2', '~> 1.3.1'
+gem 'omniauth-google-oauth2', '0.2.5'
 gem "omniauth-rails_csrf_protection"
 gem "ransack"
 gem "jsbundling-rails"
