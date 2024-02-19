@@ -4,7 +4,7 @@
   <h2><b><%= @publication.title %></b></h2>
   <div class="publication-user-details">
     <div>
-      <span><%= formattedDateTime(@publication.created_at) %></span>
+      <span><%= capitalize_string(@publication.user.full_name) %> | <%= formattedDateTime(@publication.created_at) %></span>
     </div>
   </div>
   <hr>
