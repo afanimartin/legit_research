@@ -4,7 +4,7 @@
   <% if @publications.length > 0 %>
     <%= render "publications/publications", publications: @publications %>
   <% else %>
-    <h4>No publications yet</h4>
+    <h4>No publications yet. <%= link_to "Get started!", new_publication_path %></h4>
   <% end %>
 </section>
 
