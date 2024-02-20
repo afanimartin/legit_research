@@ -27,6 +27,8 @@ Rails.application.routes.draw do
     resources :replies
   end
 
+  resources :relationships, only: [:create, :destroy]
+
   # Show user profile
   get 'profile', to: 'users#show', as: :user_profile
   

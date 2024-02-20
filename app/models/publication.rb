@@ -1,5 +1,6 @@
 class Publication < ApplicationRecord
   belongs_to :user
+  belongs_to :status
   has_many :comments, dependent: :destroy
   has_many :citations, dependent: :destroy
 
