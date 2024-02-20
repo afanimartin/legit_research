@@ -4,7 +4,7 @@ class PublicationsController < ApplicationController
   before_action :authorize_user!, only: [:edit, :update, :destroy]
 
   def index
-    @publications = Publication.all.order(:created_at => :desc)
+    @publications = Publication.where(status_id: 2).order(:created_at => :desc)
   end
 
   def show
