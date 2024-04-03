@@ -1,6 +1,7 @@
 <%= render "shared/auth_navbar" %>
 
 <section class="logged-in-user-profile">
+  <%= cl_image_tag(@user.avatar.key, width: 200, crop: :scale) %>
   <h3><%= capitalize_string(@user.full_name) %></h3>
   <span style="color:grey;">Following(<%= @user.following.count %>) | Followers(<%= @user.followers.count %>)</span>
   <hr>
