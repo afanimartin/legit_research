@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_04_04_093502) do
+ActiveRecord::Schema[7.0].define(version: 2024_04_04_120704) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -65,6 +65,19 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_04_093502) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "expired_subscriptions", force: :cascade do |t|
+    t.string "user_id"
+    t.date "start_date"
+    t.date "end_date"
+    t.integer "subscription_days"
+    t.boolean "approved"
+    t.datetime "subscription_created"
+    t.datetime "subscription_updated"
+    t.string "subscription_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "publications", id: :string, force: :cascade do |t|
     t.string "title"
     t.text "abstract", default: "", null: false
@@ -107,6 +120,14 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_04_093502) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "subscription_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.decimal "price", null: false
+    t.text "description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "subscriptions", id: :string, force: :cascade do |t|
     t.date "start_date"
     t.date "end_date"
@@ -115,6 +136,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_04_093502) do
     t.datetime "updated_at", null: false
     t.boolean "approved", default: false
     t.integer "subscription_days", default: 0
+    t.integer "subscription_type_id", null: false
+    t.index ["subscription_type_id"], name: "index_subscriptions_on_subscription_type_id"
     t.index ["user_id"], name: "index_subscriptions_on_user_id"
   end
 
@@ -144,6 +167,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_04_093502) do
   add_foreign_key "publications", "users"
   add_foreign_key "replies", "comments"
   add_foreign_key "replies", "users"
+  add_foreign_key "subscriptions", "subscription_types"
   add_foreign_key "subscriptions", "users"
   add_foreign_key "users", "roles"
 end

@@ -15,8 +15,10 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :subscription_days %>
-    <%= form.number_field :subscription_days, min: 30 %>
+    <%= form.label :subscription_type %>
+    <div class="mb-3">
+      <%= form.select :subscription_type_id, SubscriptionType.all.collect { |p| [ (p.name.capitalize + " $" + p.price.to_s + " for 30 days"), p.id ] }, include_blank: "Select subscription type", class: "custom-select" %>
+    </div>
   </div>
 
   <div class="actions">

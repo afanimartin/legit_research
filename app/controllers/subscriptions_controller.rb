@@ -9,8 +9,8 @@ class SubscriptionsController < ApplicationController
   def create
     @subscription = current_user.build_subscription(subscription_params)
     @subscription.start_date = Date.today
-    @subscription.end_date = Date.today + params[:subscription][:subscription_days].to_i.days
-    @subscription.subscription_days = params[:subscription][:subscription_days]
+    @subscription.end_date = Date.today + 30
+    @subscription.subscription_days = 30
     @subscription.approved = false # Assuming subscriptions require admin approval
     
     if @subscription.save
@@ -31,6 +31,6 @@ class SubscriptionsController < ApplicationController
   private
 
   def subscription_params
-    params.require(:subscription).permit(:subscription_days) # Adjust according to your actual model attributes
+    params.require(:subscription).permit(:subscription_type_id) # Adjust according to your actual model attributes
   end
 end

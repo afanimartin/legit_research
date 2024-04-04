@@ -1,0 +1,2 @@
+class ExpiredSubscription < ApplicationRecord
+end
