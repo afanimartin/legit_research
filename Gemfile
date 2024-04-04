@@ -8,7 +8,7 @@ gem "sprockets-rails"
 gem "pg"
 gem "sqlite3"
 gem "puma", "~> 5.0"
-gem "avo", ">= 3.0.1.beta9", source: "https://packager.dev/avo-hq/"
+gem "avo", ">= 3.0.2"
 gem "dotenv-rails"
 gem "devise"
 gem 'cloudinary'
