@@ -1,0 +1,25 @@
+<!-- app/views/subscriptions/new.html.erb -->
+<h1>Update Subscription</h1>
+
+<%= form_with(model: @subscription, local: true) do |form| %>
+  <% if @subscription.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subscription.errors.count, "error") %> prohibited this subscription from being saved:</h2>
+
+      <ul>
+        <% @subscription.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :subscription_days %>
+    <%= form.number_field :subscription_days, min: 30 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Submit" %>
+  </div>
+<% end %>

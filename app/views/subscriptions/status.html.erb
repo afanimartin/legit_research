@@ -1,0 +1,9 @@
+<!-- app/views/subscriptions/status.html.erb -->
+<h1>Subscription Status</h1>
+
+<% if @subscription.approved? %>
+  <p>Your subscription has been approved!</p>
+  <%= link_to 'Go to Dashboard', user_path(current_user) %>
+<% else %>
+  <p>Your subscription request is still pending approval. The admin is working on it and will get back to you soon.</p>
+<% end %>

@@ -9,6 +9,10 @@ Rails.application.routes.draw do
     registrations: 'registrations'
   }
 
+  get 'subscription_status', to: 'subscriptions#status'
+
+  resources :subscriptions, only: [:new, :create]
+
   resources :users
 
   # Admin authentication routes

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_03_19_134542) do
+ActiveRecord::Schema[7.0].define(version: 2024_04_04_093502) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -107,6 +107,17 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_19_134542) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "subscriptions", id: :string, force: :cascade do |t|
+    t.date "start_date"
+    t.date "end_date"
+    t.string "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "approved", default: false
+    t.integer "subscription_days", default: 0
+    t.index ["user_id"], name: "index_subscriptions_on_user_id"
+  end
+
   create_table "users", id: :string, force: :cascade do |t|
     t.string "full_name"
     t.string "plan", default: "free", null: false
@@ -133,5 +144,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_19_134542) do
   add_foreign_key "publications", "users"
   add_foreign_key "replies", "comments"
   add_foreign_key "replies", "users"
+  add_foreign_key "subscriptions", "users"
   add_foreign_key "users", "roles"
 end

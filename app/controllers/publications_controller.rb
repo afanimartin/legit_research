@@ -2,6 +2,7 @@ class PublicationsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_publication, only: [:show, :edit, :update, :destroy]
   before_action :authorize_user!, only: [:edit, :update, :destroy]
+  before_action :check_subscription, only: [:new, :create]
 
   def index
     @publications = Publication.where(status_id: 2).order(:created_at => :desc)
@@ -44,6 +45,20 @@ class PublicationsController < ApplicationController
   end
 
   private
+    def check_subscription
+      return unless current_user
+
+      subscription = current_user.subscription
+
+      if subscription.nil?
+        redirect_to new_subscription_path, alert: 'Please subscribe to access this content.'
+      elsif !subscription.approved?
+        redirect_to subscription_status_path, alert: 'Your subscription is pending approval.'
+      elsif subscription.expired?
+        redirect_to new_subscription_path, alert: 'Your subscription has expired.'
+      end
+    end
+
     def set_publication
       @publication = Publication.find(params[:id])
     end

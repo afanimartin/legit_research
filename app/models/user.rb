@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :replies, dependent: :destroy
   has_many :citations, dependent: :destroy
   belongs_to :role
+  has_one :subscription
 
   include UniqueId
  
