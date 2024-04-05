@@ -14,6 +14,7 @@ class SubscriptionsController < ApplicationController
     @subscription.approved = false # Assuming subscriptions require admin approval
     
     if @subscription.save
+      SubscriptionMailer.new_subscription_request(current_user).deliver_now
       redirect_to root_path, notice: "Subscription request submitted successfully."
     else
       render :new, status: :unprocessable_entity

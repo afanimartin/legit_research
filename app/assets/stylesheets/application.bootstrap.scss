@@ -7106,6 +7106,11 @@ blockquote {
   justify-content: center;
 }
 
+.subscription-status {
+  width: 45%;
+  margin: 100px auto;
+}
+
 .pricing-card {
   background-color: #ffffff;
   border-radius: 8px;
@@ -7161,7 +7166,8 @@ blockquote {
     width: 95%;
   }
 
-  .subscription-section {
+  .subscription-section,
+  .subscription-status {
     width: 90%;
     margin: 50px auto;
   }
