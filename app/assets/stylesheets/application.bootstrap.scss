@@ -7095,6 +7095,63 @@ blockquote {
   width: 100%;
 }
 
+.pricing-section {
+  margin: 100px 0;
+}
+
+.pricing-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.pricing-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(25% - 20px);
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+}
+
+.price {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  border-bottom: 1px solid #eeeeee;
+  padding: 10px 0;
+}
+
+.features li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 1000px) {
+  .pricing-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-card {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .google-login {
     width: 90%;
