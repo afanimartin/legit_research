@@ -7086,6 +7086,15 @@ blockquote {
   text-decoration: none;
 }
 
+.subscription-section {
+  width: 45%;
+  margin: 50px auto;
+}
+
+.subscription-section > form > input[type="submit"] {
+  width: 100%;
+}
+
 @media screen and (max-width: 425px) {
   .google-login {
     width: 90%;
@@ -7094,5 +7103,9 @@ blockquote {
   .privacy-policy-terms {
     width: 95%;
   }
+
+  .subscription-section {
+    width: 90%;
+    margin: 50px auto;
+  }
 }
-@import "actiontext.css";
