@@ -15,16 +15,17 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'tmp/webpack
 # Only keep the last 5 releases to save disk space
 set :keep_releases, 5
 
+set :passenger_restart_with_touch, true
 
-namespace :deploy do
-  desc "Run db seed"
-  task :seed do
-    on roles(:all) do
-      within current_path do
-        execute :bundle, :exec, 'rails', 'db:seed', 'RAILS_ENV=production'
-      end
-    end
-  end
+# namespace :deploy do
+#   desc "Run db seed"
+#   task :seed do
+#     on roles(:all) do
+#       within current_path do
+#         execute :bundle, :exec, 'rails', 'db:seed', 'RAILS_ENV=production'
+#       end
+#     end
+#   end
  
-  after :migrating, :seed
-end
+#   after :migrating, :seed
+# end

@@ -78,14 +78,16 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 } # Set your host and port
+  config.action_mailer.default_url_options = { host: 'legitresearch.org' } # Set your host and port
+  Rails.application.routes.default_url_options[:host] = 'legitresearch.org'
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
     port: 587,
     user_name: 'researchlegit@gmail.com', # Your Gmail email address
     password: 'legit@211',   # Your Gmail password or an App Password
-    authentication: 'legit@211',
+    authentication: 'plain',
     enable_starttls_auto: true
   }
 
