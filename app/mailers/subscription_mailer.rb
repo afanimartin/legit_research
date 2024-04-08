@@ -1,10 +1,10 @@
 # app/mailers/subscription_mailer.rb
 
 class SubscriptionMailer < ApplicationMailer
-  default from: 'researchlegit@gmail.com'
+  default from: 'support@legitresearch.org'
 
   def new_subscription_request(user)
     @user = user
-    mail(to: 'afanimartin@gmail.com', subject: 'New Subscription Request')
+    mail(to: 'admin@legitresearch.org', subject: 'New Subscription Request')
   end
 end

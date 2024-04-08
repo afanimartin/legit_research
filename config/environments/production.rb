@@ -83,10 +83,10 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
+    address: 'smtp.zoho.com',
     port: 587,
-    user_name: 'researchlegit@gmail.com', # Your Gmail email address
-    password: 'legit@211',   # Your Gmail password or an App Password
+    user_name: 'support@legitresearch.org', # Your Gmail email address
+    password: 'Support@211',   # Your Gmail password or an App Password
     authentication: 'plain',
     enable_starttls_auto: true
   }
