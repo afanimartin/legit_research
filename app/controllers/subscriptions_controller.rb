@@ -21,6 +21,19 @@ class SubscriptionsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def approve
+    @subscription = Subscription.find(params[:id])
+    if @subscription.update(approved: true)
+      SubscriptionMailer.subscription_confirmation(@subscription.user).deliver_now
+      redirect_to admin_subscriptions_path, notice: 'Subscription approved and confirmation email sent.'
+    else
+      render :edit, alert: 'There was an issue approving the subscription.'
+    end
+  end
+
   def status
     @subscription = current_user.subscription
 

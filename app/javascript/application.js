@@ -2,7 +2,7 @@
 import "@hotwired/turbo-rails";
 import "./controllers";
 import "trix";
-import "@rails/actiontext";
+require("@rails/activestorage").start();
 import * as bootstrap from "bootstrap";
 
 document.addEventListener("DOMContentLoaded", function () {

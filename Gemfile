@@ -9,6 +9,7 @@ gem "pg"
 gem "sqlite3"
 gem "puma", "~> 5.0"
 gem "avo", ">= 3.0.2"
+gem "image_processing"
 gem 'whenever', require: false
 gem "dotenv-rails"
 gem "devise"

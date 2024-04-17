@@ -7,4 +7,9 @@ class SubscriptionMailer < ApplicationMailer
     @user = user
     mail(to: 'admin@legitresearch.org', subject: 'New Subscription Request')
   end
+
+  def subscription_confirmation(user)
+    @user = user
+    mail(to: @user.email, subject: 'Subscription confirmed')
+  end
 end
