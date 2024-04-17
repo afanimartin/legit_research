@@ -2,6 +2,7 @@ lock "~> 3.18.0"
 
 set :application, 'legit'
 set :repo_url, 'git@github.com:afanimartin/legit_research.git'
+set :passenger_restart_with_sudo, true
 
 # Default branch is :master
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
