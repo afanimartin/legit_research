@@ -384,7 +384,7 @@ DEPENDENCIES
   whenever
 
 RUBY VERSION
-   ruby 3.0.3p157
+   ruby 3.0.6
 
 BUNDLED WITH
    2.5.3
