@@ -19,4 +19,3 @@ production:
   host: <%= ENV["MY_APP_DATABASE_HOST"] %>
   username: <%= ENV["MY_APP_DATABASE_USERNAME"] %>
   password: <%= ENV["MY_APP_DATABASE_PASSWORD"] %>
-  secret_key_base: ff063b9aecf91ec07bdf58563fbc8bdc7a5465bbcb820f8f319c350d4fcf93045ac62c86563be75505ffd48acc1c9e46eb1a4e02d4ebabd257e1321fdf71c0a7
