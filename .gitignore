@@ -36,3 +36,6 @@
 /node_modules
 /yarn.lock
 /package-lock.json
+# Ignore default Litestack SQLite databases.
+/db/**/*.sqlite3
+/db/**/*.sqlite3-*
