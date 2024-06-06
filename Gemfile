@@ -5,10 +5,9 @@ ruby "3.2.0"
 
 gem "rails", "~> 7.0.8"
 gem "sprockets-rails"
-gem "pg"
-gem "sqlite3", "~> 1.4"
-gem "litestack"
-gem "puma", "~> 5.0"
+gem "sqlite3", "~> 1.7.3"
+gem "litestack", '~> 0.4.3'
+gem "puma", "~> 6.0"
 gem "avo", ">= 3.0.2"
 gem "image_processing"
 gem 'whenever', require: false
@@ -30,12 +29,6 @@ end
 
 group :development do
   gem "web-console"
-  gem 'capistrano', '~> 3.17'
-  gem 'capistrano-rails', '~> 1.6', '>= 1.6.2'
-  gem 'capistrano-passenger', '~> 0.2.1'
-  gem 'capistrano-rbenv', '~> 2.2'
-  gem 'ed25519', '~> 1.3'
-  gem 'bcrypt_pbkdf', '~> 1.1'
 end
 
 group :test do
