@@ -7,7 +7,7 @@ gem "rails", "~> 7.0.8"
 gem "sprockets-rails"
 gem "sqlite3", "~> 1.7.3"
 gem "litestack", '~> 0.4.3'
-gem "puma", "~> 6.0"
+gem "puma", "~> 5.0"
 gem "avo", ">= 3.0.2"
 gem "image_processing"
 gem 'whenever', require: false

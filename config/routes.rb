@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root 'home#index'
 
-  # constraints ->(request) { request.env["warden"].admin } do
+  constraints ->(request) { request.env["warden"].admin } do
     mount Avo::Engine, at: Avo.configuration.root_path
-  # end
+  end
 
   devise_for :users, controllers: {
     registrations: 'registrations'
