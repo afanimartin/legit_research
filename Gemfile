@@ -5,6 +5,7 @@ ruby "3.0.6"
 
 gem "rails", "~> 7.0.8"
 gem "sprockets-rails"
+gem "pg"
 gem "sqlite3", "~> 1.7.3"
 gem "litestack", '~> 0.4.3'
 gem "puma", "~> 5.0"

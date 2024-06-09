@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2024_04_04_120704) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -86,7 +89,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_04_120704) do
     t.string "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "status_id", null: false
+    t.bigint "status_id", null: false
     t.index ["status_id"], name: "index_publications_on_status_id"
     t.index ["user_id"], name: "index_publications_on_user_id"
   end
@@ -136,7 +139,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_04_120704) do
     t.datetime "updated_at", null: false
     t.boolean "approved", default: false
     t.integer "subscription_days", default: 0
-    t.integer "subscription_type_id", null: false
+    t.bigint "subscription_type_id", null: false
     t.index ["subscription_type_id"], name: "index_subscriptions_on_subscription_type_id"
     t.index ["user_id"], name: "index_subscriptions_on_user_id"
   end
@@ -148,7 +151,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_04_120704) do
     t.string "encrypted_password", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "role_id"
+    t.bigint "role_id"
     t.text "bio", default: ""
     t.boolean "completed", default: false
     t.string "gender"
