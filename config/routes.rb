@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :roles
+
   # Admin authentication routes
   resources :admins, only: [:create]
 
